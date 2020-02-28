@@ -15,13 +15,13 @@ class IndexController extends BaseController {
     }
 
     public function index() {
-        $data = $this->weblogic->service(self::$TAG.'.index');
+        $data = $this->weblogic->service(self::$TAG.'.index', []);
         $this->data = array_merge($this->data, $data);
 
         //热门楼盘
         $this->data['hot_buildings'] = $this
             ->weblogic
-            ->service(self::$TAG.'.hotBuildings');
+            ->service(self::$TAG.'.hotBuildings', []);
 
         //楼花转让
         $this->data['presales'] = $this
