@@ -1,24 +1,12 @@
-[ 2020-02-28T22:58:46+08:00 ] ::1 /
+[ 2020-02-28T05:03:58+08:00 ] 47.97.215.92 /
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
-INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
 INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001738s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.001833s ]
-NOTIC: [2] Declaration of Home\Controller\BaseController::display($tpl) should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /Users/kmp/Workspace/Squirreal/squirreal/Application/Home/Controller/BaseController.class.php 第 107 行.
-SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0076s ]
-SQL: SELECT `lkey`,`en` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0067s ]
-NOTIC: [8] Undefined index: WEBSITE_FEATURE /Users/kmp/Workspace/Squirreal/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
-ERR: Too few arguments to function Common\Model\WeblogicModel::service(), 1 passed in /Users/kmp/Workspace/Squirreal/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and exactly 2 expected
-
-[ 2020-02-28T23:25:06+08:00 ] 101.80.210.145 /
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
 NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT_LANGUAGE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 54 行.
 SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0005s ]
 SQL: SELECT `lkey`,`en` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0005s ]
 NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
@@ -26,15 +14,15 @@ NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called 
 NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
 SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0006s ]
 SQL: SELECT country_id AS id,name_en AS name,`abbr`,national_flag AS cover,`web_cover_img`,`is_immigrant`,intro_en AS intro FROM `sr_country` WHERE `status` = 1 AND `is_hot` = 1 ORDER BY sort DESC,country_id DESC LIMIT 20   [ RunTime:0.0003s ]
-SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0003s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0002s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0001s ]
-SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0004s ]
 SQL: SELECT ci.city_id AS id,ci.name_en AS name,co.name_en AS country_name,ci.abbr,ci.cover,ci.web_cover_img FROM sr_city ci LEFT JOIN sr_country co ON co.country_id=ci.country_id  WHERE ci.status = 1 AND ci.is_hot = 1 ORDER BY ci.sort DESC,ci.city_id DESC LIMIT 20   [ RunTime:0.0002s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0001s ]
-SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0002s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
 SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0004s ]
 SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 7 AND `status` = 1 AND `source_id` = 0 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0002s ]
@@ -45,27 +33,27 @@ SQL: SELECT b.building_id AS id,b.name_en AS name,co.name_en AS country_name,ci.
 SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0003s ]
 SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0003s ]
 SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
-SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0001s ]
-SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
-SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0001s ]
-SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 7 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 7 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 5 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
-SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
-SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
-SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0002s ]
 SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 4 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 4 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 4 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0001s ]
-SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
-SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 8 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
 SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 6 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
@@ -83,15 +71,841 @@ SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 1 AND `type` = 1 AND `mty
 SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.1' LIMIT 1   [ RunTime:0.0001s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
-INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
-INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
-NOTIC: [8] Undefined index: shareUrl /pool/www/squirreal/Application/Runtime/Cache/Home/d6b2d147f596373d730e4fff7d3c19f1.php 第 275 行.
-INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007888s ]
-INFO: [ view_parse ] --END-- [ RunTime:0.007960s ]
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005209s ]
 INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
 INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000386s ]
-INFO: [ app_end ] --END-- [ RunTime:0.000415s ]
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000391s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2020-02-28T11:15:37+08:00 ] 180.164.57.127 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0005s ]
+SQL: SELECT `lkey`,`cn` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0006s ]
+SQL: SELECT country_id AS id,name_cn AS name,`abbr`,national_flag AS cover,`web_cover_img`,`is_immigrant`,intro_cn AS intro FROM `sr_country` WHERE `status` = 1 AND `is_hot` = 1 ORDER BY sort DESC,country_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0004s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0005s ]
+SQL: SELECT ci.city_id AS id,ci.name_cn AS name,co.name_cn AS country_name,ci.abbr,ci.cover,ci.web_cover_img FROM sr_city ci LEFT JOIN sr_country co ON co.country_id=ci.country_id  WHERE ci.status = 1 AND ci.is_hot = 1 ORDER BY ci.sort DESC,ci.city_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0010s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 7 AND `status` = 1 AND `source_id` = 0 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 24 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0006s ]
+SQL: SELECT b.building_id AS id,b.name_cn AS name,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.is_hot = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0004s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 7 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 7 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 5 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 4 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 4 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 4 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 8 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 6 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 6 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 6 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0007s ]
+SQL: SELECT p.presale_id AS id,p.type,p.name_cn AS name,p.type,p.floor_cn AS floor,p.room_cn AS room,p.layout_cn AS layout,p.area_cn AS area,p.balcony_area_cn AS balcony_area,p.price_cn AS price,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_presales p LEFT JOIN sr_country co ON co.country_id=p.country_id LEFT JOIN sr_city ci ON ci.city_id=p.city_id  WHERE p.status = 1 AND p.is_hot = 1 ORDER BY p.sort DESC,p.presale_id DESC LIMIT 0,8   [ RunTime:0.0004s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 3 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.3' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 2 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 1 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.1' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined index: shareUrl /pool/www/squirreal/Application/Runtime/Cache/Home/d6b2d147f596373d730e4fff7d3c19f1.php 第 275 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009837s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000469s ]
+
+[ 2020-02-28T11:15:42+08:00 ] 180.164.57.127 /country/rQPacD4P11.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0005s ]
+SQL: SELECT `lkey`,`cn` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'rQPacD4P11' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `sr_country` WHERE `status` = 1 AND `country_id` = 18 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0003s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 1 AND `status` = 1 AND `source_id` = 18 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0004s ]
+SQL: SELECT city_id AS id,name_cn AS name,`abbr`,`cover`,`web_cover_img` FROM `sr_city` WHERE `status` = 1 AND `is_hot` = 1 AND `country_id` = 18 ORDER BY sort DESC,city_id DESC LIMIT 20   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'rQPacD4P11' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0004s ]
+SQL: SELECT b.building_id AS id,b.name_cn AS name,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.country_id = '18' ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0003s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'rQPacD4P11' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 268 行.
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0007s ]
+SQL: SELECT p.presale_id AS id,p.type,p.name_cn AS name,p.type,p.floor_cn AS floor,p.room_cn AS room,p.layout_cn AS layout,p.area_cn AS area,p.balcony_area_cn AS balcony_area,p.price_cn AS price,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_presales p LEFT JOIN sr_country co ON co.country_id=p.country_id LEFT JOIN sr_city ci ON ci.city_id=p.city_id  WHERE p.status = 1 AND co.country_id = '18' ORDER BY p.sort DESC,p.presale_id DESC LIMIT 0,8   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2020-02-28T11:15:49+08:00 ] 180.164.57.127 /building/BPUJoPVJSN.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0006s ]
+SQL: SELECT `lkey`,`cn` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'BPUJoPVJSN' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0004s ]
+SQL: SELECT b.*,co.name_cn AS country_name,co.country_id,co.lending_rate AS lending_rate,ci.name_cn AS city_name,ci.city_id FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.building_id = '10' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country_id.18' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city_id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0004s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `mtype` = 5 AND `status` = 1 AND `source_id` = 10 ORDER BY sort ASC, media_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 3 AND `status` = 1 AND `source_id` = 10 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_brokers` [ RunTime:0.0004s ]
+SQL: SELECT name_cn AS name,certificate_cn AS certificate,languages_cn AS languages,experience_cn AS experience,education_cn AS education,`avatar`,`birthday`,`tel` FROM `sr_brokers` WHERE `status` = 1 AND `broker_id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0004s ]
+SQL: SELECT name_cn AS name,area_cn AS area,price_cn AS price FROM `sr_buildings_apartment` WHERE `status` = 1 AND `building_id` = 10 ORDER BY aid ASC  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0003s ]
+SQL: SELECT name_cn AS name,intro_cn AS intro,`icon` FROM `sr_common_tags` WHERE `status` = 1 AND `type` = 1 AND `source_id` = 10 ORDER BY tag_id ASC LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT name_cn AS name,intro_cn AS intro,`icon` FROM `sr_common_tags` WHERE `status` = 1 AND `type` = 1 AND `source_id` = 10 ORDER BY tag_id ASC LIMIT 4,4   [ RunTime:0.0002s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 4 AND `status` = 1 AND `source_id` = 10 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0002s ]
+SQL: SELECT `cn` FROM `sr_common_lang` WHERE `lkey` = 'YEAR' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2020-02-28T11:18:11+08:00 ] 180.164.57.127 /building/BPUJoPVJSN.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0007s ]
+SQL: SELECT `lkey`,`cn` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0007s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'BPUJoPVJSN' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0006s ]
+SQL: SELECT b.*,co.name_cn AS country_name,co.country_id,co.lending_rate AS lending_rate,ci.name_cn AS city_name,ci.city_id FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.building_id = '10' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country_id.18' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city_id.10' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0005s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `mtype` = 5 AND `status` = 1 AND `source_id` = 10 ORDER BY sort ASC, media_id ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 3 AND `status` = 1 AND `source_id` = 10 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_brokers` [ RunTime:0.0005s ]
+SQL: SELECT name_cn AS name,certificate_cn AS certificate,languages_cn AS languages,experience_cn AS experience,education_cn AS education,`avatar`,`birthday`,`tel` FROM `sr_brokers` WHERE `status` = 1 AND `broker_id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0004s ]
+SQL: SELECT name_cn AS name,area_cn AS area,price_cn AS price FROM `sr_buildings_apartment` WHERE `status` = 1 AND `building_id` = 10 ORDER BY aid ASC  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0004s ]
+SQL: SELECT name_cn AS name,intro_cn AS intro,`icon` FROM `sr_common_tags` WHERE `status` = 1 AND `type` = 1 AND `source_id` = 10 ORDER BY tag_id ASC LIMIT 0,4   [ RunTime:0.0002s ]
+SQL: SELECT name_cn AS name,intro_cn AS intro,`icon` FROM `sr_common_tags` WHERE `status` = 1 AND `type` = 1 AND `source_id` = 10 ORDER BY tag_id ASC LIMIT 4,4   [ RunTime:0.0001s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 4 AND `status` = 1 AND `source_id` = 10 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0003s ]
+SQL: SELECT `cn` FROM `sr_common_lang` WHERE `lkey` = 'YEAR' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2020-02-28T12:37:06+08:00 ] 209.17.97.34 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT_LANGUAGE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0006s ]
+SQL: SELECT `lkey`,`en` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0006s ]
+SQL: SELECT country_id AS id,name_en AS name,`abbr`,national_flag AS cover,`web_cover_img`,`is_immigrant`,intro_en AS intro FROM `sr_country` WHERE `status` = 1 AND `is_hot` = 1 ORDER BY sort DESC,country_id DESC LIMIT 20   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0004s ]
+SQL: SELECT ci.city_id AS id,ci.name_en AS name,co.name_en AS country_name,ci.abbr,ci.cover,ci.web_cover_img FROM sr_city ci LEFT JOIN sr_country co ON co.country_id=ci.country_id  WHERE ci.status = 1 AND ci.is_hot = 1 ORDER BY ci.sort DESC,ci.city_id DESC LIMIT 20   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0004s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 7 AND `status` = 1 AND `source_id` = 0 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 24 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0004s ]
+SQL: SELECT b.building_id AS id,b.name_en AS name,co.name_en AS country_name,ci.name_en AS city_name FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.is_hot = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0003s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 7 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 7 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 5 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 4 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 4 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 4 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 8 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 6 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 6 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 6 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0005s ]
+SQL: SELECT p.presale_id AS id,p.type,p.name_en AS name,p.type,p.floor_en AS floor,p.room_en AS room,p.layout_en AS layout,p.area_en AS area,p.balcony_area_en AS balcony_area,p.price_en AS price,co.name_en AS country_name,ci.name_en AS city_name FROM sr_presales p LEFT JOIN sr_country co ON co.country_id=p.country_id LEFT JOIN sr_city ci ON ci.city_id=p.city_id  WHERE p.status = 1 AND p.is_hot = 1 ORDER BY p.sort DESC,p.presale_id DESC LIMIT 0,8   [ RunTime:0.0003s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 3 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 2 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 1 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.1' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined index: shareUrl /pool/www/squirreal/Application/Runtime/Cache/Home/d6b2d147f596373d730e4fff7d3c19f1.php 第 275 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000536s ]
+
+[ 2020-02-28T14:10:10+08:00 ] 180.164.57.127 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0007s ]
+SQL: SELECT `lkey`,`cn` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0009s ]
+SQL: SELECT country_id AS id,name_cn AS name,`abbr`,national_flag AS cover,`web_cover_img`,`is_immigrant`,intro_cn AS intro FROM `sr_country` WHERE `status` = 1 AND `is_hot` = 1 ORDER BY sort DESC,country_id DESC LIMIT 20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0006s ]
+SQL: SELECT ci.city_id AS id,ci.name_cn AS name,co.name_cn AS country_name,ci.abbr,ci.cover,ci.web_cover_img FROM sr_city ci LEFT JOIN sr_country co ON co.country_id=ci.country_id  WHERE ci.status = 1 AND ci.is_hot = 1 ORDER BY ci.sort DESC,ci.city_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0005s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 7 AND `status` = 1 AND `source_id` = 0 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 24 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0006s ]
+SQL: SELECT b.building_id AS id,b.name_cn AS name,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.is_hot = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0004s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 7 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 7 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 5 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 4 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 4 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 4 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 8 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 6 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 6 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 6 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0006s ]
+SQL: SELECT p.presale_id AS id,p.type,p.name_cn AS name,p.type,p.floor_cn AS floor,p.room_cn AS room,p.layout_cn AS layout,p.area_cn AS area,p.balcony_area_cn AS balcony_area,p.price_cn AS price,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_presales p LEFT JOIN sr_country co ON co.country_id=p.country_id LEFT JOIN sr_city ci ON ci.city_id=p.city_id  WHERE p.status = 1 AND p.is_hot = 1 ORDER BY p.sort DESC,p.presale_id DESC LIMIT 0,8   [ RunTime:0.0003s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 3 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 2 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 1 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.1' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+NOTIC: [8] Undefined index: shareUrl /pool/www/squirreal/Application/Runtime/Cache/Home/d6b2d147f596373d730e4fff7d3c19f1.php 第 275 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2020-02-28T14:10:10+08:00 ] 180.164.57.127 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0007s ]
+SQL: SELECT `lkey`,`cn` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0008s ]
+SQL: SELECT country_id AS id,name_cn AS name,`abbr`,national_flag AS cover,`web_cover_img`,`is_immigrant`,intro_cn AS intro FROM `sr_country` WHERE `status` = 1 AND `is_hot` = 1 ORDER BY sort DESC,country_id DESC LIMIT 20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0006s ]
+SQL: SELECT ci.city_id AS id,ci.name_cn AS name,co.name_cn AS country_name,ci.abbr,ci.cover,ci.web_cover_img FROM sr_city ci LEFT JOIN sr_country co ON co.country_id=ci.country_id  WHERE ci.status = 1 AND ci.is_hot = 1 ORDER BY ci.sort DESC,ci.city_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0005s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 7 AND `status` = 1 AND `source_id` = 0 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 24 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0006s ]
+SQL: SELECT b.building_id AS id,b.name_cn AS name,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.is_hot = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0005s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 7 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 7 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 5 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 4 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 4 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 4 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 8 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 6 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 6 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 6 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0007s ]
+SQL: SELECT p.presale_id AS id,p.type,p.name_cn AS name,p.type,p.floor_cn AS floor,p.room_cn AS room,p.layout_cn AS layout,p.area_cn AS area,p.balcony_area_cn AS balcony_area,p.price_cn AS price,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_presales p LEFT JOIN sr_country co ON co.country_id=p.country_id LEFT JOIN sr_city ci ON ci.city_id=p.city_id  WHERE p.status = 1 AND p.is_hot = 1 ORDER BY p.sort DESC,p.presale_id DESC LIMIT 0,8   [ RunTime:0.0003s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 3 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 2 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 1 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.1' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined index: shareUrl /pool/www/squirreal/Application/Runtime/Cache/Home/d6b2d147f596373d730e4fff7d3c19f1.php 第 275 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010693s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2020-02-28T14:33:54+08:00 ] 123.145.32.115 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0006s ]
+SQL: SELECT `lkey`,`cn` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0008s ]
+SQL: SELECT country_id AS id,name_cn AS name,`abbr`,national_flag AS cover,`web_cover_img`,`is_immigrant`,intro_cn AS intro FROM `sr_country` WHERE `status` = 1 AND `is_hot` = 1 ORDER BY sort DESC,country_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0004s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0004s ]
+SQL: SELECT ci.city_id AS id,ci.name_cn AS name,co.name_cn AS country_name,ci.abbr,ci.cover,ci.web_cover_img FROM sr_city ci LEFT JOIN sr_country co ON co.country_id=ci.country_id  WHERE ci.status = 1 AND ci.is_hot = 1 ORDER BY ci.sort DESC,ci.city_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0005s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 7 AND `status` = 1 AND `source_id` = 0 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0002s ]
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 24 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0005s ]
+SQL: SELECT b.building_id AS id,b.name_cn AS name,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.is_hot = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0005s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 7 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 7 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 5 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 4 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 4 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 4 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 8 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_cn` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 6 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_cn` FROM `sr_buildings_apartment` WHERE `building_id` = 6 AND `status` = 1 ORDER BY price_cn ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 6 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0006s ]
+SQL: SELECT p.presale_id AS id,p.type,p.name_cn AS name,p.type,p.floor_cn AS floor,p.room_cn AS room,p.layout_cn AS layout,p.area_cn AS area,p.balcony_area_cn AS balcony_area,p.price_cn AS price,co.name_cn AS country_name,ci.name_cn AS city_name FROM sr_presales p LEFT JOIN sr_country co ON co.country_id=p.country_id LEFT JOIN sr_city ci ON ci.city_id=p.city_id  WHERE p.status = 1 AND p.is_hot = 1 ORDER BY p.sort DESC,p.presale_id DESC LIMIT 0,8   [ RunTime:0.0003s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 3 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 2 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.2' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 1 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.1' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Undefined index: shareUrl /pool/www/squirreal/Application/Runtime/Cache/Home/d6b2d147f596373d730e4fff7d3c19f1.php 第 275 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009010s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000549s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000611s ]
+
+[ 2020-02-28T16:00:51+08:00 ] 101.132.151.201 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT_LANGUAGE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0005s ]
+SQL: SELECT `lkey`,`en` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0007s ]
+SQL: SELECT country_id AS id,name_en AS name,`abbr`,national_flag AS cover,`web_cover_img`,`is_immigrant`,intro_en AS intro FROM `sr_country` WHERE `status` = 1 AND `is_hot` = 1 ORDER BY sort DESC,country_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0004s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0005s ]
+SQL: SELECT ci.city_id AS id,ci.name_en AS name,co.name_en AS country_name,ci.abbr,ci.cover,ci.web_cover_img FROM sr_city ci LEFT JOIN sr_country co ON co.country_id=ci.country_id  WHERE ci.status = 1 AND ci.is_hot = 1 ORDER BY ci.sort DESC,ci.city_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0004s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 7 AND `status` = 1 AND `source_id` = 0 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 24 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0004s ]
+SQL: SELECT b.building_id AS id,b.name_en AS name,co.name_en AS country_name,ci.name_en AS city_name FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.is_hot = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0004s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 7 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 7 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 5 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 4 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 4 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 4 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 8 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 6 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 6 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 6 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0006s ]
+SQL: SELECT p.presale_id AS id,p.type,p.name_en AS name,p.type,p.floor_en AS floor,p.room_en AS room,p.layout_en AS layout,p.area_en AS area,p.balcony_area_en AS balcony_area,p.price_en AS price,co.name_en AS country_name,ci.name_en AS city_name FROM sr_presales p LEFT JOIN sr_country co ON co.country_id=p.country_id LEFT JOIN sr_city ci ON ci.city_id=p.city_id  WHERE p.status = 1 AND p.is_hot = 1 ORDER BY p.sort DESC,p.presale_id DESC LIMIT 0,8   [ RunTime:0.0003s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 3 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 2 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 1 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.1' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+NOTIC: [8] Undefined index: shareUrl /pool/www/squirreal/Application/Runtime/Cache/Home/d6b2d147f596373d730e4fff7d3c19f1.php 第 275 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2020-02-28T18:15:13+08:00 ] 171.13.14.18 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+NOTIC: [8] Undefined index: HTTP_ACCEPT_LANGUAGE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0005s ]
+SQL: SELECT `lkey`,`en` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0007s ]
+SQL: SELECT country_id AS id,name_en AS name,`abbr`,national_flag AS cover,`web_cover_img`,`is_immigrant`,intro_en AS intro FROM `sr_country` WHERE `status` = 1 AND `is_hot` = 1 ORDER BY sort DESC,country_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0004s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0004s ]
+SQL: SELECT ci.city_id AS id,ci.name_en AS name,co.name_en AS country_name,ci.abbr,ci.cover,ci.web_cover_img FROM sr_city ci LEFT JOIN sr_country co ON co.country_id=ci.country_id  WHERE ci.status = 1 AND ci.is_hot = 1 ORDER BY ci.sort DESC,ci.city_id DESC LIMIT 20   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0004s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 7 AND `status` = 1 AND `source_id` = 0 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 24 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0004s ]
+SQL: SELECT b.building_id AS id,b.name_en AS name,co.name_en AS country_name,ci.name_en AS city_name FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.is_hot = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0003s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 7 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 7 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 5 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 4 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 4 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 4 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 8 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 6 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 6 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 6 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0006s ]
+SQL: SELECT p.presale_id AS id,p.type,p.name_en AS name,p.type,p.floor_en AS floor,p.room_en AS room,p.layout_en AS layout,p.area_en AS area,p.balcony_area_en AS balcony_area,p.price_en AS price,co.name_en AS country_name,ci.name_en AS city_name FROM sr_presales p LEFT JOIN sr_country co ON co.country_id=p.country_id LEFT JOIN sr_city ci ON ci.city_id=p.city_id  WHERE p.status = 1 AND p.is_hot = 1 ORDER BY p.sort DESC,p.presale_id DESC LIMIT 0,8   [ RunTime:0.0003s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 3 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 2 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 1 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.1' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined index: shareUrl /pool/www/squirreal/Application/Runtime/Cache/Home/d6b2d147f596373d730e4fff7d3c19f1.php 第 275 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007794s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2020-02-28T19:39:04+08:00 ] 157.55.39.30 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+ERR: 无法加载控制器:Robots.txt
+
+[ 2020-02-28T19:39:13+08:00 ] 157.55.39.30 /robots.txt
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+ERR: 无法加载控制器:Robots.txt
+
+[ 2020-02-28T23:35:29+08:00 ] 101.80.210.145 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+NOTIC: [2048] Declaration of Home\Controller\BaseController::display() should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 113 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0005s ]
+SQL: SELECT `lkey`,`en` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /pool/www/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0011s ]
+SQL: SELECT country_id AS id,name_en AS name,`abbr`,national_flag AS cover,`web_cover_img`,`is_immigrant`,intro_en AS intro FROM `sr_country` WHERE `status` = 1 AND `is_hot` = 1 ORDER BY sort DESC,country_id DESC LIMIT 20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0006s ]
+SQL: SELECT ci.city_id AS id,ci.name_en AS name,co.name_en AS country_name,ci.abbr,ci.cover,ci.web_cover_img FROM sr_city ci LEFT JOIN sr_country co ON co.country_id=ci.country_id  WHERE ci.status = 1 AND ci.is_hot = 1 ORDER BY ci.sort DESC,ci.city_id DESC LIMIT 20   [ RunTime:0.0004s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0006s ]
+SQL: SELECT `type`,`mtype`,`link_type`,`link_url`,`file` FROM `sr_media` WHERE `mtype` = 7 AND `status` = 1 AND `source_id` = 0 ORDER BY sort ASC, media_id ASC  [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 2 for Common\Model\WeblogicModel::service(), called in /pool/www/squirreal/Application/Home/Controller/IndexController.class.php on line 24 and defined /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 7 行.
+NOTIC: [8] Undefined variable: args /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0006s ]
+SQL: SELECT b.building_id AS id,b.name_en AS name,co.name_en AS country_name,ci.name_en AS city_name FROM sr_buildings b LEFT JOIN sr_country co ON co.country_id=b.country_id LEFT JOIN sr_city ci ON ci.city_id=b.city_id  WHERE b.status = 1 AND b.is_hot = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `sr_buildings_apartment` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_common_tags` [ RunTime:0.0003s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 11 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 11 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 11 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 10 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 10 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 10 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 7 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 7 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 7 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 5 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 5 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 5 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 4 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 4 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 4 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 8 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 8 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 8 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `name_en` FROM `sr_common_tags` WHERE `type` = 1 AND `source_id` = 6 AND `status` = 1 ORDER BY tag_id ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `price_en` FROM `sr_buildings_apartment` WHERE `building_id` = 6 AND `status` = 1 ORDER BY price_en ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 6 AND `type` = 1 AND `mtype` = 3 AND `status` = 1 ORDER BY sort ASC LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Common/Model/WeblogicModel.class.php 第 127 行.
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0007s ]
+SQL: SELECT p.presale_id AS id,p.type,p.name_en AS name,p.type,p.floor_en AS floor,p.room_en AS room,p.layout_en AS layout,p.area_en AS area,p.balcony_area_en AS balcony_area,p.price_en AS price,co.name_en AS country_name,ci.name_en AS city_name FROM sr_presales p LEFT JOIN sr_country co ON co.country_id=p.country_id LEFT JOIN sr_city ci ON ci.city_id=p.city_id  WHERE p.status = 1 AND p.is_hot = 1 ORDER BY p.sort DESC,p.presale_id DESC LIMIT 0,8   [ RunTime:0.0003s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 3 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.3' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 2 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `file` FROM `sr_media` WHERE `source_id` = 1 AND `type` = 1 AND `mtype` = 8 AND `status` = 1 ORDER BY sort ASC LIMIT 1,1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'presale.id.1' LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined index: shareUrl /pool/www/squirreal/Application/Runtime/Cache/Home/d6b2d147f596373d730e4fff7d3c19f1.php 第 275 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007776s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000577s ]
 
