@@ -1,0 +1,115 @@
+{include file='Common/header_m' /}
+
+<div class="country-info">
+	<div class="flag" style="background-image:url({$data.info.national_flag})"></div>
+	<div>
+		<div class="country-name">{$data.info.name}</div>
+		<div class="country-meta">
+			<div>
+				<div>{$data.lang.POPULATION}：{$data.info.population}</div>
+				<div>{$data.lang.CURRENCY}：{$data.info.currency}</div>
+			</div>
+			<div style="margin-left:12px">
+				<div>{$data.lang.AREA}：{$data.info.area}</div>
+				<div>{$data.lang.EXCHANGE_RATE}：{$data.info.exchange_rate}</div>
+			</div>
+		</div>
+	</div>
+</div><!-- //国家详情 -->
+
+<?php if($data['banner']):?>
+<div class="swiper">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+            <?php foreach ($data['banner'] as $k => $v):?>
+				<div class="swiper-slide">
+                    <?php if($v['type'] == 1):?>
+						<div class="image link-item" data-url="{:U($v['target'].'/'.$v['targetId'])}" style="background-image: url('{$v.file}')"></div>
+                    <?php elseif ($v['type'] == 2):?>
+						<div class="video" data-file="{$v.file}" style="background-image: url('{$v.file}?x-oss-process=video/snapshot,t_1000')">
+							<img src="__PUBLIC__/img/icon_play.png" />
+						</div>
+                    <?php endif;?>
+				</div>
+            <?php endforeach;?>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+</div><!-- //轮播 -->
+<?php endif;?>
+
+<?php if($data['hot_city']):?>
+<div class="section">
+	<div class="section-title">{$data.lang.HOT_CITY}</div>
+	<div class="section-body">
+		<div class="scroll-box">
+			<div class="hot-city">
+				<?php foreach ($data['hot_city'] as $k => $item):?>
+				<div class="city-item link-item" style="background-image:url({$item.cover})" data-url="{:U('city/'.$item['id'])}">
+					<div class="city-name">{$item.name}</div>
+				</div>
+                <?php endforeach;?>
+			</div>
+		</div>
+	</div>
+</div><!-- //热门城市 -->
+<?php endif;?>
+
+<?php if($data['info']['feature']):?>
+
+<div class="section feature">
+	<div class="section-title">{$data.lang.IMMIGRATION_POLICY}</div>
+	<div class="section-body">
+		<div>{$data.info.feature}</div>
+	</div>
+</div>
+
+<?php endif;?>
+
+<?php if($data['info']['name']):?>
+
+<div class="section">
+	<div class="section-title">{$data.lang.ECONOMIC_PROFILE}</div>
+	<div class="section-body">
+		<div class="economy-item">
+			<span>GDP</span>
+			<span>{$data.info.gdp}</span>
+		</div>
+		<div class="economy-item">
+			<span>{$data.lang.GDP_PER_CAPITA}</span>
+			<span>{$data.info.gdp_per_capita}</span>
+		</div>
+		<div class="economy-item">
+			<span>{$data.lang.GDP_GROWTH}</span>
+			<span>{$data.info.gdp_growth}</span>
+		</div>
+	</div>
+</div><!-- //经济概况 -->
+
+<?php endif;?>
+
+<?php if($data['buildings']):?>
+<div class="section buildings">
+    <div class="section-title">{$data.lang.RELATED_BUILDINGS}</div>
+    <div class="section-body">
+        <?php foreach ($data['buildings'] as $k => $item):?>
+            <div class="building-item link-item" data-url="{:U('building/'.$item['id'])}">
+                <div class="building-cover" style="background-image:url({$item.cover})">
+                    <?php if($item['tag']):?>
+					<span class="building-tag">{$item.tag}</span>
+					<?php endif;?>
+                </div>
+                <div class="building-info">
+                    <div class="building-name"><span>{$item.name}</span></div>
+                    <div class="building-location"><span>{$item.location}</span></div>
+                    <div class="building-price"><span>{$item.price}</span><text class="sp">{$data.lang.SP}</text></div>
+                    <button class="btn">{$data.lang.VIEW_MORE}</button>
+                </div>
+            </div>
+        <?php endforeach;?>
+    </div>
+</div><!-- //合作楼盘 -->
+
+<?php endif;?>
+
+{include file='Common/footer_m' /}

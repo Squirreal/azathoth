@@ -1,0 +1,36 @@
+{include file='Common/header_m' /}
+
+<?php if($data['presales']):?>
+<div class="section presales">
+	<div class="section-body" style="padding-top: 0px">
+        <?php foreach ($data['presales'] as $k => $item):?>
+		<div class="presale-item link-item" data-url="{:U('presale/'.$item['id'])}">
+			<div class="presale-meta">
+				<div class="presale-cover" style="background-image:url({$item.cover})"></div>
+				<div class="presale-info">
+                    <?php if($item['name']):?>
+						<span class="item-left">{$item.name}</span>
+                    <?php endif;?>
+                    <?php if($item['type']):?>
+						<span>{$item.type}</span>
+                    <?php endif;?>
+				</div>
+				<div class="presale-info">
+                    <?php if($item['layout']):?>
+						<span class="item-left">{$item.layout}</span>
+                    <?php endif;?>
+                    <?php if($item['area']):?>
+						<span>{$item.area}</span>
+                    <?php endif;?>
+				</div>
+			</div>
+			<div class="presale-price">
+				<span>{$item.price}</span>
+			</div>
+		</div>
+        <?php endforeach;?>
+	</div>
+</div><!-- //楼花转让 -->
+<?php endif;?>
+
+{include file='Common/footer_m' /}

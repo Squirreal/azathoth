@@ -1,0 +1,704 @@
+[ 2020-02-27T15:33:37+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:33:37+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0007s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2020-02-27T15:33:37+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0007s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_country` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_city` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_buildings` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_brokers` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_brokers` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_users` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_users` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_presales` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2020-02-27T15:33:48+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sr_city c WHERE c.status = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT c1.name_cn AS country_name,c.city_id AS id,c.abbr,c.name_cn,c.name_en,c.climate_cn AS climate,c.area_cn AS area,c.feature_cn AS feature,c.livable_rank,c.cover,c.is_hot,c.created_time AS time,c.sort FROM sr_city c LEFT JOIN sr_country c1 ON c1.country_id=c.country_id  WHERE c.status = 1 ORDER BY sort DESC,city_id DESC LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.12' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.13' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:33:48+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_country` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT country_id AS id,`abbr`,`name_cn`,`name_en`,population_cn AS population,area_cn AS area,gdp_cn AS gdp,gdp_per_capita_cn AS gdp_per_capita,gdp_growth_cn AS gdp_growth,`national_flag`,currency_cn AS currency,exchange_rate_cn AS exchange_rate,`is_hot`,`is_immigrant`,`lending_rate`,created_time AS time,`sort` FROM `sr_country` WHERE `status` = 1 ORDER BY sort DESC,country_id DESC LIMIT 0,9999   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.22' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.19' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.20' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:33:52+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0003s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'fFS2qWVgsg' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0003s ]
+SQL: SELECT media_id AS id,`type`,`name`,`file`,`link_type`,`link_url`,`sort`,created_time AS time FROM `sr_media` WHERE `mtype` = 2 AND `source_id` = 4 AND `status` = 1 ORDER BY sort DESC, media_id ASC  [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.104' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.103' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.108' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:33:57+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000607s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'GhYHxIH20B' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0005s ]
+SQL: SELECT media_id AS id,`type`,`name`,`file`,`link_type`,`link_url`,`sort`,created_time AS time FROM `sr_media` WHERE `mtype` = 2 AND `source_id` = 9 AND `status` = 1 ORDER BY sort DESC, media_id ASC  [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.107' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.105' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.109' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2020-02-27T15:34:01+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '__KS8qcw72' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `sr_media` WHERE `media_id` = 105 AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `sr_media` SET `sort`='3' WHERE `media_id` = 105 [ RunTime:0.0002s ]
+
+[ 2020-02-27T15:34:01+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0007s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'GhYHxIH20B' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0005s ]
+SQL: SELECT media_id AS id,`type`,`name`,`file`,`link_type`,`link_url`,`sort`,created_time AS time FROM `sr_media` WHERE `mtype` = 2 AND `source_id` = 9 AND `status` = 1 ORDER BY sort DESC, media_id ASC  [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.105' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.107' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.109' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:34:04+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '__KS8qcw72' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sr_media` WHERE `media_id` = 105 AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `sr_media` SET `sort`='2' WHERE `media_id` = 105 [ RunTime:0.0002s ]
+
+[ 2020-02-27T15:34:04+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'GhYHxIH20B' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0005s ]
+SQL: SELECT media_id AS id,`type`,`name`,`file`,`link_type`,`link_url`,`sort`,created_time AS time FROM `sr_media` WHERE `mtype` = 2 AND `source_id` = 9 AND `status` = 1 ORDER BY sort DESC, media_id ASC  [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.107' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.105' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.109' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:34:14+08:00 ] 155.201.35.107 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:34:15+08:00 ] 155.201.35.107 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2020-02-27T15:34:16+08:00 ] 155.201.35.107 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0006s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_country` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_city` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_buildings` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_brokers` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_brokers` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_users` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_users` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_presales` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_presales` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:37:21+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '__KS8qcw72' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `sr_media` WHERE `media_id` = 105 AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `sr_media` SET `status`='-1',`modified_by`='1',`modified_time`='2020-02-27 15:37:21' WHERE `media_id` = 105 [ RunTime:0.0003s ]
+
+[ 2020-02-27T15:37:40+08:00 ] 101.80.210.145 /admin/upload/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+
+[ 2020-02-27T15:37:40+08:00 ] 101.80.210.145 /admin/upload/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+
+[ 2020-02-27T15:37:40+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'GhYHxIH20B' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_media` WHERE `mtype` = 2 AND `source_id` = 9 AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `sr_media` (`type`,`mtype`,`source_id`,`name`,`file`,`sort`,`status`,`created_by`,`created_time`) VALUES ('1','2','9','montreal3.jpg','20200227/ef6c150bdb56ee34121427933b33d044.jpg','3','1','1','2020-02-27 15:37:40') [ RunTime:0.0002s ]
+
+[ 2020-02-27T15:37:40+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'GhYHxIH20B' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_media` WHERE `mtype` = 2 AND `source_id` = 9 AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `sr_media` (`type`,`mtype`,`source_id`,`name`,`file`,`sort`,`status`,`created_by`,`created_time`) VALUES ('1','2','9','montreal2.jpg','20200227/e2df73945a4a84abf2a94d5e745d7a9d.jpg','4','1','1','2020-02-27 15:37:40') [ RunTime:0.0002s ]
+
+[ 2020-02-27T15:37:40+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0006s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'GhYHxIH20B' LIMIT 1   [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0007s ]
+SQL: SELECT media_id AS id,`type`,`name`,`file`,`link_type`,`link_url`,`sort`,created_time AS time FROM `sr_media` WHERE `mtype` = 2 AND `source_id` = 9 AND `status` = 1 ORDER BY sort DESC, media_id ASC  [ RunTime:0.0120s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.292' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `q` = '7km7kgFey3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: INSERT INTO `sr_variables` (`name`,`value`,`q`) VALUES ('media.id.292','292','7km7kgFey3') [ RunTime:0.0281s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.107' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.291' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `q` = 'aFDh5053uX' LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `sr_variables` (`name`,`value`,`q`) VALUES ('media.id.291','291','aFDh5053uX') [ RunTime:0.0066s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.109' LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2020-02-27T15:37:40+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0007s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'GhYHxIH20B' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_media` [ RunTime:0.0004s ]
+SQL: SELECT media_id AS id,`type`,`name`,`file`,`link_type`,`link_url`,`sort`,created_time AS time FROM `sr_media` WHERE `mtype` = 2 AND `source_id` = 9 AND `status` = 1 ORDER BY sort DESC, media_id ASC  [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.292' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.107' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.291' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'media.id.109' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:40:42+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0004s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0003s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'ON62aJvzZ8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0005s ]
+SQL: SELECT `country_id`,`abbr`,`name_cn`,`name_en`,`area_cn`,`area_en`,`climate_cn`,`climate_en`,`feature_cn`,`feature_en`,`building_intro_cn`,`building_intro_en`,`livable_rank`,`cover`,`web_cover_img`,`is_hot`,`sort` FROM `sr_city` WHERE `city_id` = 10 AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2020-02-27T15:41:16+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'ON62aJvzZ8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `sr_city` WHERE `city_id` = 10 AND `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'rQPacD4P11' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `city_id` FROM `sr_city` WHERE `country_id` = 18 AND `name_cn` = '帕福斯' AND `name_en` = 'Paphos' AND `status` = 1 AND `city_id` <> '10' LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `sr_city` SET `country_id`='18',`abbr`='PAPHOS',`name_cn`='帕福斯',`name_en`='Paphos',`area_cn`='399.9平方公里',`area_en`='399.9 km²',`climate_cn`='',`climate_en`='',`feature_cn`='&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;font face=&quot;PingFang SC&quot; size=&quot;2&quot; color=&quot;#000000&quot; pingfang=&quot;&quot; sc&#039;;=&quot;&quot; font-kerning:=&quot;&quot; none;=&quot;&quot; font-variant-ligatures:=&quot;&quot; common-ligatures;=&quot;&quot; color:=&quot;&quot; #000000&quot;=&quot;&quot;&gt;帕福斯，人口&lt;/font&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot; color=&quot;#000000&quot;&gt;35,961&lt;/font&gt;&lt;font face=&quot;PingFang SC&quot; size=&quot;2&quot; color=&quot;#000000&quot; pingfang=&quot;&quot; sc&#039;;=&quot;&quot; font-kerning:=&quot;&quot; none;=&quot;&quot; font-variant-ligatures:=&quot;&quot; common-ligatures;=&quot;&quot; color:=&quot;&quot; #000000&quot;=&quot;&quot;&gt;（&lt;/font&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot; color=&quot;#000000&quot;&gt;2018&lt;/font&gt;&lt;font face=&quot;PingFang SC&quot; size=&quot;2&quot; color=&quot;#000000&quot; pingfang=&quot;&quot; sc&#039;;=&quot;&quot; font-kerning:=&quot;&quot; none;=&quot;&quot; font-variant-ligatures:=&quot;&quot; common-ligatures;=&quot;&quot; color:=&quot;&quot; #000000&quot;=&quot;&quot;&gt;年），是著名的度假圣地，拥有迷人的钓鱼海湾。&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;font face=&quot;PingFang SC&quot; size=&quot;2&quot; color=&quot;#000000&quot; pingfang=&quot;&quot; sc&#039;;=&quot;&quot; font-kerning:=&quot;&quot; none;=&quot;&quot; font-variant-ligatures:=&quot;&quot; common-ligatures;=&quot;&quot; color:=&quot;&quot; #000000&quot;=&quot;&quot;&gt;由于拥有壮观的古代遗址，帕福斯被联合国教科文组织列为世界文化和自然遗产，并且被评为&lt;/font&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot; color=&quot;#000000&quot;&gt;2017&lt;/font&gt;&lt;font face=&quot;PingFang SC&quot; size=&quot;2&quot; color=&quot;#000000&quot; pingfang=&quot;&quot; sc&#039;;=&quot;&quot; font-kerning:=&quot;&quot; none;=&quot;&quot; font-variant-ligatures:=&quot;&quot; common-ligatures;=&quot;&quot; color:=&quot;&quot; #000000&quot;=&quot;&quot;&gt;年欧洲文化之都。&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;font face=&quot;PingFang SC&quot; size=&quot;2&quot; color=&quot;#000000&quot; pingfang=&quot;&quot; sc&#039;;=&quot;&quot; font-kerning:=&quot;&quot; none;=&quot;&quot; font-variant-ligatures:=&quot;&quot; common-ligatures;=&quot;&quot; color:=&quot;&quot; #000000&quot;=&quot;&quot;&gt;帕福斯市拥有&lt;/font&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot; color=&quot;#000000&quot;&gt;38&lt;/font&gt;&lt;font face=&quot;PingFang SC&quot; size=&quot;2&quot; color=&quot;#000000&quot; pingfang=&quot;&quot; sc&#039;;=&quot;&quot; font-kerning:=&quot;&quot; none;=&quot;&quot; font-variant-ligatures:=&quot;&quot; common-ligatures;=&quot;&quot; color:=&quot;&quot; #000000&quot;=&quot;&quot;&gt;所国立小学，&lt;/font&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot; color=&quot;#000000&quot;&gt;8&lt;/font&gt;&lt;font face=&quot;PingFang SC&quot; size=&quot;2&quot; color=&quot;#000000&quot; pingfang=&quot;&quot; sc&#039;;=&quot;&quot; font-kerning:=&quot;&quot; none;=&quot;&quot; font-variant-ligatures:=&quot;&quot; common-ligatures;=&quot;&quot; color:=&quot;&quot; #000000&quot;=&quot;&quot;&gt;所国立中学，&lt;/font&gt;&lt;font face=&quot;Arial&quot; size=&quot;2&quot; color=&quot;#000000&quot;&gt;4&lt;/font&gt;&lt;font face=&quot;PingFang SC&quot; size=&quot;2&quot; color=&quot;#000000&quot; pingfang=&quot;&quot; sc&#039;;=&quot;&quot; font-kerning:=&quot;&quot; none;=&quot;&quot; font-variant-ligatures:=&quot;&quot; common-ligatures;=&quot;&quot; color:=&quot;&quot; #000000&quot;=&quot;&quot;&gt;所私立英语学校和一所私立俄语学校。&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot; pingfang=&quot;&quot; sc&quot;;=&quot;&quot; color:=&quot;&quot; rgb(0,=&quot;&quot; 0,=&quot;&quot; 0);=&quot;&quot; font-size:=&quot;&quot; small;&quot;=&quot;&quot;&gt;帕福斯国际机场是塞浦路斯第二大机场。&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;',`feature_en`='&lt;ul&gt;&lt;li&gt;&lt;p&gt;&lt;font face=&quot;Helvetica&quot; color=&quot;#000000&quot; style=&quot;font-size: small;&quot;&gt;Paphos, with a population of about 35,961 (as of 2018), is a popular tourist resort, home to an attractive fishing harbour.&nbsp;&lt;/font&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: small;&quot;&gt;Paphos is included in the official UNESCO list of cultural and natural treasures of the world&#039;s heritage for its spectacular ancient remains and was selected as a European Capital of Culture for 2017.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: small;&quot;&gt;The Paphos municipality has 38 primary state schools, 8 secondary state schools, 4 privately run English schools and one privately run Russian school.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: small;&quot;&gt;Paphos International Airport is the country&#039;s second-largest airport.&lt;/span&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;',`building_intro_cn`='',`building_intro_en`='',`livable_rank`='',`cover`='20200226/7a244402dee3e1aea6982811713682c3.png',`web_cover_img`='20200226/67d69ef4838bbf0c53013013b56a07c6.jpeg',`sort`='3',`modified_by`='1',`modified_time`='2020-02-27 15:41:16' WHERE `city_id` = 10 [ RunTime:0.0009s ]
+
+[ 2020-02-27T15:41:16+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0007s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0006s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sr_city c WHERE c.status = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT c1.name_cn AS country_name,c.city_id AS id,c.abbr,c.name_cn,c.name_en,c.climate_cn AS climate,c.area_cn AS area,c.feature_cn AS feature,c.livable_rank,c.cover,c.is_hot,c.created_time AS time,c.sort FROM sr_city c LEFT JOIN sr_country c1 ON c1.country_id=c.country_id  WHERE c.status = 1 ORDER BY sort DESC,city_id DESC LIMIT 0,20   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.12' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.13' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:43:18+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_brokers` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_brokers` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT broker_id AS id,`name_cn`,`name_en`,certificate_cn AS certificate,languages_cn AS languages,`birthday`,`avatar`,created_time AS time,`tel` FROM `sr_brokers` WHERE `status` = 1 ORDER BY broker_id DESC LIMIT 0,9999   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.4' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.1' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:43:18+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_country` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_country` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT country_id AS id,`abbr`,`name_cn`,`name_en`,population_cn AS population,area_cn AS area,gdp_cn AS gdp,gdp_per_capita_cn AS gdp_per_capita,gdp_growth_cn AS gdp_growth,`national_flag`,currency_cn AS currency,exchange_rate_cn AS exchange_rate,`is_hot`,`is_immigrant`,`lending_rate`,created_time AS time,`sort` FROM `sr_country` WHERE `status` = 1 ORDER BY sort DESC,country_id DESC LIMIT 0,9999   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.17' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.22' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.19' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.23' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.2' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.20' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:43:18+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sr_buildings b WHERE b.status = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT b.building_id AS id,b.name_cn,b.name_en,b.delivery_time_cn AS delivery_time,b.property_years,b.project_status,co.name_cn AS country,ci.name_cn AS city,br.name_cn AS broker,b.is_hot,b.created_time AS time,b.sort FROM sr_buildings b LEFT JOIN sr_country co ON b.country_id=co.country_id LEFT JOIN sr_city ci ON b.city_id=ci.city_id LEFT JOIN sr_brokers br ON b.broker_id=br.broker_id  WHERE b.status = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0005s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:43:44+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'ggGtFGlnan' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT building_id AS id,`country_id`,`city_id`,`broker_id`,`name_cn`,`name_en`,`delivery_time_cn`,`delivery_time_en`,`property_years`,`project_status`,`loans_cn`,`loans_en`,`address_cn`,`address_en`,`assignment_cn`,`assignment_en`,`sort` FROM `sr_buildings` WHERE `building_id` = '11' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'country.id.18' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.4' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2020-02-27T15:43:44+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'rQPacD4P11' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Undefined index: abbr /pool/www/squirreal/Application/Admin/Controller/DataController.class.php 第 310 行.
+NOTIC: [8] Undefined index: name_cn /pool/www/squirreal/Application/Admin/Controller/DataController.class.php 第 313 行.
+NOTIC: [8] Undefined index: name_en /pool/www/squirreal/Application/Admin/Controller/DataController.class.php 第 316 行.
+NOTIC: [8] Undefined index: page /pool/www/squirreal/Application/Admin/Controller/DataController.class.php 第 322 行.
+NOTIC: [8] Undefined index: pageSize /pool/www/squirreal/Application/Admin/Controller/DataController.class.php 第 325 行.
+SQL: SELECT COUNT(*) AS tp_count FROM sr_city c WHERE c.status = 1 AND c.country_id = '18' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT c1.name_cn AS country_name,c.city_id AS id,c.abbr,c.name_cn,c.name_en,c.climate_cn AS climate,c.area_cn AS area,c.feature_cn AS feature,c.livable_rank,c.cover,c.is_hot,c.created_time AS time,c.sort FROM sr_city c LEFT JOIN sr_country c1 ON c1.country_id=c.country_id  WHERE c.status = 1 AND c.country_id = '18' ORDER BY sort DESC,city_id DESC LIMIT 0,9999   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:43:52+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0004s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'ggGtFGlnan' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_buildings` WHERE `building_id` = '11' AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'rQPacD4P11' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'ON62aJvzZ8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'UQ3YS5c1Rc' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `building_id` FROM `sr_buildings` WHERE `country_id` = 18 AND `city_id` = 10 AND `name_cn` = '米索依别墅8' AND `name_en` = 'Mesogi Residence 8' AND `building_id` <> '11' AND `status` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `sr_buildings` SET `country_id`='18',`city_id`='10',`broker_id`='4',`name_cn`='米索依别墅8',`name_en`='Mesogi Residence 8',`address_cn`='市中心东北，紧邻B7',`address_en`='North-east of city center, adjacent to B7',`delivery_time_cn`='2021年',`delivery_time_en`='2021',`property_years`='-1',`project_status`='0',`loans_cn`='&lt;p&gt;外国买家极难从塞浦路斯银行申请到贷款。&lt;br&gt;&lt;/p&gt;',`loans_en`='&lt;p&gt;It&#039;s rarely for Bank of Cyprus providing loans to foreign buyers.&lt;br&gt;&lt;/p&gt;',`sort`='3',`modified_by`='1',`modified_time`='2020-02-27 15:43:52' WHERE `building_id` = '11' [ RunTime:0.0003s ]
+
+[ 2020-02-27T15:43:52+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000598s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0006s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_buildings` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sr_buildings b WHERE b.status = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT b.building_id AS id,b.name_cn,b.name_en,b.delivery_time_cn AS delivery_time,b.property_years,b.project_status,co.name_cn AS country,ci.name_cn AS city,br.name_cn AS broker,b.is_hot,b.created_time AS time,b.sort FROM sr_buildings b LEFT JOIN sr_country co ON b.country_id=co.country_id LEFT JOIN sr_city ci ON b.city_id=ci.city_id LEFT JOIN sr_brokers br ON b.broker_id=br.broker_id  WHERE b.status = 1 ORDER BY b.sort DESC,b.building_id DESC LIMIT 0,20   [ RunTime:0.0174s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.11' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.7' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.5' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.8' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'building.id.6' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T15:43:52+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0004s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_city` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM sr_city c WHERE c.status = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT c1.name_cn AS country_name,c.city_id AS id,c.abbr,c.name_cn,c.name_en,c.climate_cn AS climate,c.area_cn AS area,c.feature_cn AS feature,c.livable_rank,c.cover,c.is_hot,c.created_time AS time,c.sort FROM sr_city c LEFT JOIN sr_country c1 ON c1.country_id=c.country_id  WHERE c.status = 1 ORDER BY sort DESC,city_id DESC LIMIT 0,9999   [ RunTime:0.0003s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.12' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.4' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.9' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.13' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.10' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'city.id.14' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T16:04:42+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `sr_brokers` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_brokers` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT broker_id AS id,`name_cn`,`name_en`,certificate_cn AS certificate,languages_cn AS languages,`birthday`,`avatar`,created_time AS time,`tel` FROM `sr_brokers` WHERE `status` = 1 ORDER BY broker_id DESC LIMIT 0,20   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.4' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.2' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.1' LIMIT 1   [ RunTime:0.0001s ]
+
+[ 2020-02-27T16:04:44+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0003s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_brokers` [ RunTime:0.0004s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'UQ3YS5c1Rc' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT broker_id AS id,`avatar`,`name_cn`,`name_en`,`certificate_cn`,`certificate_en`,`languages_cn`,`languages_en`,`experience_cn`,`experience_en`,`education_cn`,`education_en`,`birthday`,`tel` FROM `sr_brokers` WHERE `broker_id` = 4 AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2020-02-27T16:05:03+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0006s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_brokers` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = 'UQ3YS5c1Rc' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `sr_brokers` WHERE `broker_id` = 4 AND `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `broker_id` FROM `sr_brokers` WHERE `name_cn` = '松鼠精选' AND `name_en` = 'Selected by Squirreal' AND `status` = 1 AND `broker_id` <> '4' LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `sr_brokers` SET `avatar`='20200215/b36f00c9076b07ef4c55490a9051aff2.jpg',`name_cn`='松鼠精选',`name_en`='Selected by Squirreal',`certificate_cn`='-',`certificate_en`='-',`languages_cn`='-',`languages_en`='-',`experience_cn`='-',`experience_en`='-',`education_cn`='-',`education_en`='-',`birthday`='2019-12-18',`tel`='400-123-456',`modified_by`='1',`modified_time`='2020-02-27 16:05:03' WHERE `broker_id` = 4 [ RunTime:0.0003s ]
+
+[ 2020-02-27T16:05:03+08:00 ] 101.80.210.145 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: SHOW COLUMNS FROM `sr_sys_users` [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `sr_variables` [ RunTime:0.0005s ]
+SQL: SELECT `value` FROM `sr_variables` WHERE `q` = '6zr25s2EDV' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `sr_sys_users` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_sys_groups` [ RunTime:0.0005s ]
+SQL: SELECT `privileges` FROM `sr_sys_groups` WHERE `group_id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `sr_brokers` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `sr_brokers` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT broker_id AS id,`name_cn`,`name_en`,certificate_cn AS certificate,languages_cn AS languages,`birthday`,`avatar`,created_time AS time,`tel` FROM `sr_brokers` WHERE `status` = 1 ORDER BY broker_id DESC LIMIT 0,20   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.4' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.3' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.2' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `q` FROM `sr_variables` WHERE `name` = 'broker.id.1' LIMIT 1   [ RunTime:0.0001s ]
+

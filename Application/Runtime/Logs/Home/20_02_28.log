@@ -1,0 +1,13 @@
+[ 2020-02-28T22:58:46+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001833s ]
+NOTIC: [2] Declaration of Home\Controller\BaseController::display($tpl) should be compatible with Think\Controller::display($templateFile = '', $charset = '', $contentType = '', $content = '', $prefix = '') /Users/kmp/Workspace/Squirreal/squirreal/Application/Home/Controller/BaseController.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `sr_common_lang` [ RunTime:0.0076s ]
+SQL: SELECT `lkey`,`en` FROM `sr_common_lang` WHERE `status` = 1 ORDER BY lkey ASC  [ RunTime:0.0067s ]
+NOTIC: [8] Undefined index: WEBSITE_FEATURE /Users/kmp/Workspace/Squirreal/squirreal/Application/Home/Controller/BaseController.class.php 第 25 行.
+ERR: Too few arguments to function Common\Model\WeblogicModel::service(), 1 passed in /Users/kmp/Workspace/Squirreal/squirreal/Application/Home/Controller/IndexController.class.php on line 18 and exactly 2 expected
+

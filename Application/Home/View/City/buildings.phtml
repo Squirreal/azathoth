@@ -1,0 +1,78 @@
+<?php if(IS_AJAX && IS_POST):?>
+
+	<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.RELATED_BUILDINGS}</h2>
+	<div class="section-body animated" data-animate="fadeInUp">
+        <?php foreach($data['buildings'] as $k => $v):?>
+			<a class="building-item" href="{:LU('/building/'.$v['id'])}">
+				<div class="building-cover">
+					<div class="cover" style="background-image:url({$v.cover})"></div>
+					<div class="inner">
+                        <?php if($v['tag']):?>
+							<span class="building-tag">{$v.tag}</span>
+                        <?php endif;?>
+					</div>
+				</div>
+				<div class="building-info">
+					<h3 class="building-name">{$v.name}</h3>
+					<p class="building-price"><span>{$v.price}</span><span class="sp">{$data.lang.SP}</span></p>
+					<p class="building-location">{$v.location}</p>
+				</div>
+			</a>
+        <?php endforeach;?>
+
+
+	</div>
+	<div class="pagebar animated" data-animate="fadeInUp">
+		{$data.pager}
+	</div>
+
+<?php else:?>
+
+{include file='Common/header' /}
+
+<div class="breadcrumb">
+	<div class="container">
+		<span><a href="{:LU('/')}">{$data.lang.HOMEPAGE}</a></span>
+		<img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+		<span><a href="{:LU('/country/'.$data['info']['country_id'])}">{$data.info.country_name}</a></span>
+		<img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+		<span><a href="{:LU('/city/'.$data['id'])}">{$data.info.name}</a></span>
+		<img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+		<span>{$data.lang.RELATED_BUILDINGS}</span>
+	</div>
+</div>
+
+<?php if($data['buildings']):?>
+<div class="section hot-buildings" style="background: #FFFFFF;min-height:600px">
+	<div class="container">
+		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.RELATED_BUILDINGS}</h2>
+		<div class="section-body animated" data-animate="fadeInUp">
+            <?php foreach($data['buildings'] as $k => $v):?>
+			<a class="building-item" href="{:LU('/building/'.$v['id'])}">
+				<div class="building-cover">
+					<div class="cover" style="background-image:url({$v.cover})"></div>
+					<div class="inner">
+                        <?php if($v['tag']):?>
+						<span class="building-tag">{$v.tag}</span>
+                        <?php endif;?>
+					</div>
+				</div>
+				<div class="building-info">
+					<h3 class="building-name">{$v.name}</h3>
+					<p class="building-price"><span>{$v.price}</span><span class="sp">{$data.lang.SP}</span></p>
+					<p class="building-location">{$v.location}</p>
+				</div>
+			</a>
+            <?php endforeach;?>
+
+
+		</div>
+		<div class="pagebar animated" data-animate="fadeInUp">
+			{$data.pager}
+		</div>
+	</div>
+</div>
+<?php endif;?>
+
+{include file='Common/footer' /}
+<?php endif;?>

@@ -1,0 +1,86 @@
+<?php if(IS_AJAX && IS_POST):?>
+
+	<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.PRESALES_LIST}</h2>
+	<div class="section-body animated" data-animate="fadeInUp">
+        <?php foreach ($data['presales'] as $k => $item):?>
+			<a class="presale-item" href="{:LU('/presale/'.$item['id'])}">
+				<div class="presale-meta">
+					<div class="presale-cover" style="background-image:url({$item.cover})"></div>
+					<div class="presale-info">
+                        <?php if($item['name']):?>
+							<span class="item-left">{$item.name}</span>
+                        <?php endif;?>
+                        <?php if($item['type']):?>
+							<span>{$item.type}</span>
+                        <?php endif;?>
+					</div>
+					<div class="presale-info">
+                        <?php if($item['layout']):?>
+							<span class="item-left">{$item.layout}</span>
+                        <?php endif;?>
+                        <?php if($item['area']):?>
+							<span>{$item.area}</span>
+                        <?php endif;?>
+					</div>
+				</div>
+				<div class="presale-price">
+					<span>{$item.price}</span>
+				</div>
+			</a>
+        <?php endforeach;?>
+
+	</div>
+	<div class="pagebar animated" data-animate="fadeInUp">
+		{$data.pager}
+	</div>
+
+<?php else:?>
+
+{include file='Common/header' /}
+
+<div class="breadcrumb">
+	<div class="container">
+		<span><a href="{:LU('/')}">{$data.lang.HOMEPAGE}</a></span>
+		<img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+		<span><a href="{:LU('/country/'.$data['info']['country_id'])}">{$data.info.country_name}</a></span>
+		<img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+		<span><a href="{:LU('/city/'.$data['id'])}">{$data.info.name}</a></span>
+		<img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+		<span>{$data.lang.PRESALES_LIST}</span>
+	</div>
+</div>
+
+<?php if($data['presales']):?>
+<div class="section presales-list" style="background: #FFFFFF;min-height:600px">
+	<div class="container">
+		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.PRESALES_LIST}</h2>
+		<div class="section-body animated" data-animate="fadeInUp">
+            <?php foreach ($data['presales'] as $k => $item):?>
+            <a class="presale-item" href="{:LU('/presale/'.$item['id'])}">
+	            <div class="presale-cover">
+		            <div class="cover" style="background-image:url({$item.cover})"></div>
+		            <div class="inner">
+                        <?php if($item['type']):?>
+				            <span class="presale-type">{$item.type}</span>
+                        <?php endif;?>
+		            </div>
+	            </div>
+	            <div class="presale-info">
+		            <h3 class="presale-name">{$item.name}</h3>
+		            <p class="presale-price"><span>{$item.price}</span></p>
+		            <p class="presale-layout">{$item.layout} - {$item.area}</p>
+		            <p class="presale-location">{$item.country_name}·{$item.city_name}</p>
+	            </div>
+            </a>
+            <?php endforeach;?>
+
+		</div>
+		<div class="pagebar animated" data-animate="fadeInUp">
+			{$data.pager}
+		</div>
+	</div>
+</div>
+<?php endif;?>
+
+{include file='Common/footer' /}
+<?php endif;?>

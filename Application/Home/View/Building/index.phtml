@@ -1,0 +1,180 @@
+{include file='Common/header' /}
+
+<div class="breadcrumb">
+    <div class="container">
+	    <span><a href="{:LU('/')}">{$data.lang.HOMEPAGE}</a></span>
+	    <img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+	    <span><a href="{:LU('/country/'.$data['info']['country_id'])}">{$data.info.country_name}</a></span>
+        <img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+	    <span><a href="{:LU('/city/'.$data['info']['city_id'])}">{$data.info.city_name}</a></span>
+        <img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+	    <span><a href="{:LU('/city/buildings/id/'.$data['info']['city_id'])}">{$data.lang.RELATED_BUILDINGS}</a></span>
+	    <img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+        <span>{$data.info.name}</span>
+    </div>
+</div>
+<div class="building-banner">
+    <?php if($data['banner_video']):?>
+
+    <div class="building-video fl">
+        <video poster="{$data.banner_video}?x-oss-process=video/snapshot,t_1000" controls>
+            <source src="{$data.banner_video}" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="building-images fl">
+        <?php foreach ($data['banner_images'] as $k => $v):?>
+        <div class="building-image<?php if($k > 3): ?> hide<?php endif;?>">
+            <a class="inner js-img-viwer" href="{$v.file}" data-group="0" data-id="{$k}" style="background-image: url('{$v.file}')"><img src="{$v.file}" /></a>
+        </div>
+        <?php endforeach;?>
+
+    </div>
+
+    <?php else:?>
+
+    <?php foreach ($data['banner_images'] as $k => $v):?>
+    <div class="building-image<?php if($k > 7): ?> hide<?php endif;?>">
+        <a class="inner js-img-viwer" href="{$v.file}" data-group="0" data-id="{$k}" style="background-image: url('{$v.file}')"><img src="{$v.file}" /> </a>
+    </div>
+    <?php endforeach;?>
+
+
+    <?php endif;?>
+
+</div>
+<div class="navbar" id="nav">
+    <div class="container">
+        <ul>
+            <li data-target="building-info">{$data.lang.PROJECT_INFO}</li>
+            <li data-target="purchase-process">{$data.lang.PURCHASE_PROCESS}</li>
+            <li data-target="loans">{$data.lang.LOANS}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="building animated" data-animate="fadeInUp">
+            <h2 class="building-name">{$data.info.name}</h2>
+            <p class="building-location">{$data.info.location}</p>
+            <div class="building-meta">
+                <div class="meta-item">
+                    <div class="meta-head">
+                        <h3>{$data.lang.PROPERTY_YEARS}</h3>
+                        <div><img src="__PUBLIC__/img/icon_timeline.png"/></div>
+                    </div>
+                    <?php if($data['info']['property_years'] > 0):?><p>{$data.info.property_years}{$data.lang.YEAR}</p><?php endif;?>
+                    <?php if($data['info']['property_years'] == -1):?><p>{$data.lang.FOREVER}</p><?php endif;?>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-head">
+                        <h3>{$data.lang.DELIVERY_TIME}</h3>
+                        <div><img src="__PUBLIC__/img/icon_today.png"/></div>
+                    </div>
+                    <p>{$data.info.delivery_time}</p>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-head">
+                        <h3>{$data.lang.PROJECT_STATUS}</h3>
+                        <div><img src="__PUBLIC__/img/icon_dashboard.png"/></div>
+                    </div>
+                    <p>{$data.info.project_status}</p>
+                </div>
+            </div>
+            <div class="building-info waypoint animated" data-animate="fadeInUp" id="building-info">
+                <h3 class="info-title">
+	                <span>{$data.lang.PROJECT_INFO}</span>
+	                <?php if($data['info']['pdf']):?>
+
+	                <?php if($data['userinfo']):?>
+	                <a href="{$data.info.pdf}" target="_blank">{$data.lang.PROJECT_DOWNLOAD}<img src="__PUBLIC__/img/icon_download.png" /> </a>
+	                <?php else:?>
+	                <a href="javascript:" class="need-login">{$data.lang.PROJECT_DOWNLOAD}<img src="__PUBLIC__/img/icon_download.png" /> </a>
+	                <?php endif;?>
+	                <?php endif;?>
+                </h3>
+                <div class="info-body">
+                    <div class="apartments">
+	                    <div class="swiper-apartment">
+		                    <div class="swiper-container">
+			                    <div class="swiper-wrapper">
+                                    <?php if($data['apartments']):foreach ($data['apartments'] as $k => $v):?>
+				                    <div class="swiper-slide">
+					                    <div class="apartment-item">
+						                    <h4>{$v.name}</h4>
+						                    <div>
+							                    <p>{$data.lang.AREA}：{$v.area}{$data.lang.SP}</p>
+							                    <p>{$data.lang.PRICE_ALIAS}：{$v.price}{$data.lang.SP}</p>
+						                    </div>
+					                    </div>
+				                    </div>
+                                    <?php endforeach;endif;?>
+			                    </div>
+			                    <div class="swiper-pagination"></div>
+		                    </div>
+	                    </div>
+
+                    </div>
+                    <div class="tags">
+                        <?php if($data['tags']):$tag_count=0;foreach($data['tags'] as $tags):?>
+                        <?php foreach($tags as $k => $v):?>
+                        <div class="tag-item <?php if($tag_count > 0 && ($tag_count + 1) % 4 == 0):?>side<?php endif;?>">
+                            <div class="icon"><img src="{$v.icon}" /></div>
+                            <h4>{$v.name}</h4>
+                            <p>{$v.intro}</p>
+                        </div>
+                        <?php if($tag_count > 0 && ($tag_count + 1) % 4 == 0):?><div class="clear"></div><?php endif;?>
+                        <?php $tag_count++;endforeach;?>
+                        <?php endforeach;endif;?>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase-process waypoint animated" data-animate="fadeInUp" id="purchase-process">
+                <h3 class="pp-title">{$data.lang.PURCHASE_PROCESS}</h3>
+                <div class="pp-body">
+                    <?php foreach ($data['process'] as $k => $v):?>
+                    <?php if($v['type'] == 1):?>
+                    <img src="{$v.file}" />
+                    <?php elseif($v['type'] == 2):?>
+                    <video poster="{$v.file}?x-oss-process=video/snapshot,t_1000" controls>
+                        <source src="{$v.file}" type="video/mp4">
+                    </video>
+                    <?php endif;?>
+                    <?php endforeach;?>
+                </div>
+            </div>
+            <div class="loans waypoint animated" data-animate="fadeInUp" id="loans">
+                <h3 class="lo-title">{$data.lang.LOANS}</h3>
+                <div class="lo-body">
+                    {$data.info.loans}
+                </div>
+            </div>
+        </div>
+        <div class="broker animated" data-animate="fadeInUp" id="broker">
+	        <div class="broker-inner">
+		        <div class="broker-name">
+			        <div style="background-image: url('{$data.broker.avatar}')" class="avatar"></div>
+			        <span>{$data.broker.name}</span>
+		        </div>
+		        <p><span class="title">{$data.lang.LANGUAGES}：</span><span>{$data.broker.languages}</span></p>
+		        <p><span class="title">{$data.lang.CERTIFICATE}：</span><span>{$data.broker.certificate}</span></p>
+                <?php if($data['broker']['experience']):?>
+			        <p><span class="title">{$data.lang.INDUSTRY_EXPERIENCE}：</span><span>{$data.broker.experience}</span></p>
+                <?php endif;?>
+                <?php if($data['broker']['education']):?>
+			        <p><span class="title">{$data.lang.EDUCATION}：</span><span>{$data.broker.education}</span></p>
+                <?php endif;?>
+                <?php if($data['broker']['tel']):?>
+			        <p><span class="title">{$data.lang.TELEPHONE}：</span><span>{$data.broker.tel}</span></p>
+                <?php endif;?>
+		        <button id="btn-consult" data-type="1" data-id="{$data.id}">{$data.lang.CONSULT_NOW}</button>
+	        </div>
+
+	        <img src="__PUBLIC__/img/img_qrcode.jpg" class="qrcode" />
+        </div>
+    </div>
+</div>
+
+
+{include file='Common/footer' /}

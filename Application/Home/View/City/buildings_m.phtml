@@ -1,0 +1,26 @@
+{include file='Common/header_m' /}
+
+<?php if($data['buildings']):?>
+<div class="section buildings">
+	<div class="section-body" style="padding-top: 0px">
+        <?php foreach ($data['buildings'] as $k => $item):?>
+		<div class="building-item link-item" data-url="{:U('building/'.$item['id'])}">
+			<div class="building-cover" style="background-image:url({$item.cover})">
+                <?php if($item['tag']):?>
+					<span class="building-tag">{$item.tag}</span>
+                <?php endif;?>
+			</div>
+			<div class="building-info">
+				<div class="building-name"><span>{$item.name}</span></div>
+				<div class="building-location"><span>{$item.location}</span></div>
+				<div class="building-price"><span>{$item.price}</span><text class="sp">{$data.lang.SP}</text></div>
+				<button class="btn">{$data.lang.VIEW_MORE}</button>
+			</div>
+		</div>
+        <?php endforeach;?>
+	</div>
+</div><!-- //合作楼盘 -->
+
+<?php endif;?>
+
+{include file='Common/footer_m' /}

@@ -1,0 +1,183 @@
+{include file='Common/header' /}
+
+<div class="breadcrumb">
+	<div class="container">
+		<span><a href="{:LU('/')}">{$data.lang.HOMEPAGE}</a></span>
+		<img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+		<span>{$data.info.name}</span>
+	</div>
+</div>
+
+<div class="country-banner">
+	<?php if($data['banner_video']):?>
+
+	<div class="country-video fl">
+		<video poster="{$data.banner_video}?x-oss-process=video/snapshot,t_1000" controls>
+			<source src="{$data.banner_video}" type="video/mp4">
+		</video>
+	</div>
+
+	<?php else:?>
+
+	<div class="country-image fl" style="background-image: url('<?=$data['banner_images'][1]['file']?>')"></div>
+
+	<?php endif;?>
+
+	<div class="country-image fl" style="background-image: url('<?=$data['banner_images'][0]['file']?>')">
+		<div class="inner">
+			<h2 class="country-name animated" data-animate="fadeInUp">{$data.info.name}</h2>
+			<div class="country-meta animated" data-animate="fadeInUp">
+				<p>{$data.lang.POPULATION}：{$data.info.population}</p>
+				<p>{$data.lang.AREA}：{$data.info.area}</p>
+				<p>{$data.lang.CURRENCY}：{$data.info.currency}</p>
+				<p>{$data.lang.EXCHANGE_RATE}：{$data.info.exchange_rate}</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="navbar" id="nav">
+	<div class="container">
+		<ul>
+			<li data-target="hot-city">{$data.lang.HOT_CITY}</li>
+			<li data-target="country-identity">{$data.lang.COUNTRY_IDENTITY}</li>
+			<li data-target="country-immigration">{$data.lang.IMMIGRATION}</li>
+			<li data-target="country-feature">{$data.lang.ECONOMIC_PROFILE}</li>
+			<li data-target="hot-buildings">{$data.lang.RELATED_BUILDINGS}</li>
+		</ul>
+	</div>
+</div>
+
+<?php if($data['hot_city']):?>
+	<div class="section waypoint hot-city" id="hot-city">
+		<div class="container">
+			<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.HOT_CITY}</h2>
+			<div class="section-body animated" data-animate="fadeInUp">
+				<div class="swiper-country">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+                            <?php foreach ($data['hot_city'] as $k => $v):?>
+								<div class="swiper-slide">
+									<a href="{:LU('/city/'.$v['id'])}" title="{$v.full_name}">
+										<div class="cover" style="background-image:url({$v.web_cover_img})"></div>
+										<div class="inner">
+											<h3>{$v.full_name}</h3>
+										</div>
+									</a>
+								</div>
+                            <?php endforeach;?>
+						</div>
+					</div>
+					<!-- Navigation -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php endif;?>
+
+<div class="section waypoint country-identity" id="country-identity">
+	<div class="container">
+		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.COUNTRY_IDENTITY}</h2>
+		<div class="section-body animated" data-animate="fadeInUp">
+			{$data.info.feature}
+		</div>
+	</div>
+</div>
+
+<div class="section waypoint country-immigration" id="country-immigration">
+	<div class="container">
+		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.IMMIGRATION}</h2>
+		<div class="section-body animated" data-animate="fadeInUp">
+			{$data.info.immigration}
+		</div>
+	</div>
+</div>
+
+<div class="section waypoint country-feature" id="country-feature">
+	<div class="container">
+		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.ECONOMIC_PROFILE}</h2>
+		<div class="section-body animated" data-animate="fadeInUp">
+			<div class="feature-item">
+				<p class="icon"><img src="__PUBLIC__/img/icon_monetization_on.png"/> </p>
+				<p class="title">GDP</p>
+				<p class="intro">{$data.info.gdp}</p>
+			</div>
+			<div class="feature-item">
+				<p class="icon"><img src="__PUBLIC__/img/icon_attach_money.png"/> </p>
+				<p class="title">{$data.lang.GDP_PER_CAPITA}</p>
+				<p class="intro">{$data.info.gdp_per_capita}</p>
+			</div>
+			<div class="feature-item">
+				<p class="icon"><img src="__PUBLIC__/img/icon_trending_up.png"/> </p>
+				<p class="title">{$data.lang.GDP_GROWTH}</p>
+				<p class="intro">{$data.info.gdp_growth}</p>
+			</div>
+			<div class="feature-item">
+				<p class="icon"><img src="__PUBLIC__/img/icon_bookmarks.png"/> </p>
+				<p class="title">{$data.lang.RANKING_OF_SECURITY_COUNTRIES}</p>
+				<p class="intro">{$data.info.security_ranking}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<?php if($data['presales']):?>
+<div class="section waypoint presales-list" id="presales-list">
+	<div class="container">
+		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.PRESALES_LIST}</h2>
+		<div class="section-body animated" data-animate="fadeInUp">
+            <?php foreach ($data['presales'] as $k => $item):?>
+            <a class="presale-item" href="{:LU('/presale/'.$item['id'])}">
+	            <div class="presale-cover">
+		            <div class="cover" style="background-image:url({$item.cover})"></div>
+		            <div class="inner">
+                        <?php if($item['type']):?>
+				            <span class="presale-type">{$item.type}</span>
+                        <?php endif;?>
+		            </div>
+	            </div>
+	            <div class="presale-info">
+		            <h3 class="presale-name">{$item.name}</h3>
+		            <p class="presale-price"><span>{$item.price}</span></p>
+		            <p class="presale-layout">{$item.layout} - {$item.area}</p>
+		            <p class="presale-location">{$item.country_name}·{$item.city_name}</p>
+	            </div>
+            </a>
+            <?php endforeach;?>
+
+		</div>
+	</div>
+</div>
+<?php endif;?>
+
+
+<?php if($data['buildings']):?>
+<div class="section waypoint hot-buildings" id="hot-buildings">
+	<div class="container">
+		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.RELATED_BUILDINGS}</h2>
+		<div class="section-body animated" data-animate="fadeInUp">
+            <?php foreach($data['buildings'] as $k => $v):?>
+			<a class="building-item" href="{:LU('/building/'.$v['id'])}">
+				<div class="building-cover">
+					<div class="cover" style="background-image:url({$v.cover})"></div>
+					<div class="inner">
+                        <?php if($v['tag']):?>
+							<span class="building-tag">{$v.tag}</span>
+                        <?php endif;?>
+					</div>
+				</div>
+				<div class="building-info">
+					<h3 class="building-name">{$v.name}</h3>
+					<p class="building-price"><span>{$v.price}</span><span class="sp">{$data.lang.SP}</span></p>
+					<p class="building-location">{$v.location}</p>
+				</div>
+			</a>
+            <?php endforeach;?>
+		</div>
+	</div>
+</div>
+<?php endif;?>
+
+
+{include file='Common/footer' /}
