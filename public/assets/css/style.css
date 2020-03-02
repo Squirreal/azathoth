@@ -162,7 +162,7 @@ body.city .section-title { text-align:center;font-size: 28px;color: #333333;lett
 body.city .section.city-feature, body.city .section.presales-list { background: #F2F3F5; }
 body.city .city-feature dl { width:100%;overflow:hidden;zoom:1;clear:both;padding-bottom:16px; }
 body.city .city-feature dt { width: 150px;font-size: 18px;float:left; }
-body.city .city-feature dd { font-size:18px;color:#999999;padding-left:150px; }
+body.city .city-feature dd { font-size:18px;padding-left:150px;list-style-type:disc;font-size:14px; }
 body.city .building-intro img { max-width:100%;display: block;margin: 0px auto }
 
 
