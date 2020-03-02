@@ -41,7 +41,7 @@
 		<ul>
 			<li data-target="city-feature">{$data.lang.CITY_IDENTITY}</li>
             <?php if($data['building_intro']):?>
-			<li data-target="building-intro">{$data.lang.BUILDING_INTRO}</li>
+			<li data-target="building-intro">{$data.lang.REAL_ESTATE_MARKET}</li>
             <?php endif;?>
             <?php if($data['presales']):?>
 			<li data-target="presales-list">{$data.lang.PRESALES_LIST}</li>
@@ -83,19 +83,18 @@
 			<?php endif;?>
 		</div>
 	</div>
-
 </div>
 
+<?php if($data['building_intro']):?>
 <div class="section waypoint building-intro" id="building-intro">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.BUILDING_INTRO}</h2>
+		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.REAL_ESTATE_MARKET}</h2>
 		<div class="section-body animated" data-animate="fadeInUp">
 			{$data.info.building_intro}
 		</div>
 	</div>
-
 </div>
-
+<?php endif;?>
 
 <?php if($data['presales']):?>
 <div class="section waypoint presales-list" id="presales-list">
