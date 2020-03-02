@@ -40,7 +40,9 @@
 	<div class="container">
 		<ul>
 			<li data-target="city-feature">{$data.lang.CITY_IDENTITY}</li>
+            <?php if($data['building_intro']):?>
 			<li data-target="building-intro">{$data.lang.BUILDING_INTRO}</li>
+            <?php endif;?>
             <?php if($data['presales']):?>
 			<li data-target="presales-list">{$data.lang.PRESALES_LIST}</li>
             <?php endif;?>
