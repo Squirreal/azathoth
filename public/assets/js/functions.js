@@ -101,6 +101,7 @@
                 spaceBetween: 12,
                 pagination: {
                     el: '.swiper-pagination',
+                    clickable :true,
                 }
             });
 
@@ -134,6 +135,7 @@
                 spaceBetween: 12,
                 pagination: {
                     el: '.swiper-pagination',
+                    clickable :true,
                 }
             });
 
