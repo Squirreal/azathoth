@@ -157,8 +157,12 @@
 			        <div style="background-image: url('{$data.broker.avatar}')" class="avatar"></div>
 			        <span>{$data.broker.name}</span>
 		        </div>
-		        <p><span class="title">{$data.lang.LANGUAGES}：</span><span>{$data.broker.languages}</span></p>
-		        <p><span class="title">{$data.lang.CERTIFICATE}：</span><span>{$data.broker.certificate}</span></p>
+                <?php if($data['broker']['languages']):?>
+                <p><span class="title">{$data.lang.LANGUAGES}：</span><span>{$data.broker.languages}</span></p>
+                <?php endif;?>
+                <?php if($data['broker']['certificate']):?>
+                <p><span class="title">{$data.lang.CERTIFICATE}：</span><span>{$data.broker.certificate}</span></p>
+                <?php endif;?>
                 <?php if($data['broker']['experience']):?>
 			        <p><span class="title">{$data.lang.INDUSTRY_EXPERIENCE}：</span><span>{$data.broker.experience}</span></p>
                 <?php endif;?>
