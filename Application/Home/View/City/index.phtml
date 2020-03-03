@@ -40,7 +40,7 @@
 	<div class="container">
 		<ul>
 			<li data-target="city-feature">{$data.lang.CITY_IDENTITY}</li>
-            <?php if($data['building_intro']):?>
+            <?php if($data['info']['building-intro']):?>
 			<li data-target="building-intro">{$data.lang.REAL_ESTATE_MARKET}</li>
             <?php endif;?>
             <?php if($data['presales']):?>
@@ -85,7 +85,7 @@
 	</div>
 </div>
 
-<?php if($data['building_intro']):?>
+<?php if($data['info']['building_intro']):?>
 <div class="section waypoint building-intro" id="building-intro">
 	<div class="container">
 		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.REAL_ESTATE_MARKET}</h2>
