@@ -182,6 +182,7 @@ body.building .building-banner .building-image.col-3 { width:33.33333%;height:10
 body.building .building-banner .building-image.col-4 { width:25%;height:100%; }
 body.building .building-banner .building-images .building-image { width:50%; }
 body.building .section { background:#FAFAFA;padding-top:32px;padding-bottom:100px; }
+body.building .section .section-title { font-weight: 600;font-size: 20px; }
 body.building .section .container { overflow:hidden;zoom:1; }
 body.building .section .broker { float:right;width:240px; }
 body.building .section .broker.fixed { position: fixed;top:80px; }
@@ -208,7 +209,7 @@ body.building .section .building .building-info .info-title { font-size:18px;lin
 body.building .section .building .building-info .info-title a { color:#A1887F !important;font-size:14px;display:flex;align-items: center; }
 body.building .section .building .building-info .info-title a img { height:14px;margin-left:5px; }
 body.building .section .building .building-info .info-body { padding-top:20px; }
-body.building .section .building .building-info .apartments {  }
+/* body.building .section .building .building-info .apartments {  } */
 body.building .section .building .building-info .apartments .swiper-apartment { height:178px; }
 body.building .section .building .building-info .apartments .swiper-apartment .swiper-container { height:100%; }
 body.building .section .building .building-info .apartment-item { padding-bottom:12px;height:138px;display:flex;flex-direction:column;justify-content:space-between;border-radius: 4px;border:1px solid #cccccc; }
@@ -226,7 +227,7 @@ body.building .section .building .building-info .tag-item .icon img { max-width:
 body.building .section .building .building-info .tag-item h4 { font-weight: 400;font-size:14px;margin-top:16px; }
 body.building .section .building .building-info .tag-item p { font-size:12px;color:#999999 }
 body.building .section .building .purchase-process { border-radius:4px;background:#FFFFFF;border:1px solid #E6E8EE;margin-top:32px;padding:20px; }
-body.building .section .building .purchase-process .pp-title { font-size:18px;line-height:18px;font-weight: 400; }
+/* body.building .section .building .purchase-process .pp-title { font-size:18px;line-height:18px;font-weight: 400; } */
 body.building .section .building .purchase-process .pp-body { padding-top:20px; }
 body.building .section .building .purchase-process .pp-body img { width:100%;height:auto;display:block; }
 body.building .section .building .purchase-process .pp-body video { width:100%;height:425px; }
@@ -276,6 +277,7 @@ body.presale .section .building .building-info { border-radius:4px;background:#F
 body.presale .section .building .building-info .info-title { font-size:18px;line-height:18px;font-weight: 400;display: flex;align-items: center;justify-content: space-between; }
 body.presale .section .building .building-info .info-title a { color:#A1887F !important;font-size:14px;display:flex;align-items: center; }
 body.presale .section .building .building-info .info-title a img { height:14px;margin-left:5px; }
+body.presale .section .building .building-info .section-title { font-weight:600;font-size:20px; }
 body.presale .section .building .building-info .info-body { padding-top:20px; }
 body.presale .section .building .building-info .apartment-item { display:flex;align-items: center;justify-content: space-between;font-size:16px;padding:16px 0px;border-bottom:1px solid #E6E8EE; }
 body.presale .section .building .building-info .apartment-item:last-child { border:0px; }

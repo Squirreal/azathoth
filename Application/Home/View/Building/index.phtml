@@ -84,7 +84,7 @@
             </div>
             <div class="building-info waypoint " id="building-info">
                 <h3 class="info-title">
-	                <span>{$data.lang.PROJECT_INFO}</span>
+	                <div class="section-title">{$data.lang.PROJECT_INFO}</div>
 	                <?php if($data['info']['pdf']):?>
 
 	                <?php if($data['userinfo']):?>
@@ -131,7 +131,7 @@
                 </div>
             </div>
             <div class="purchase-process waypoint " id="purchase-process">
-                <h3 class="pp-title">{$data.lang.PURCHASE_PROCESS}</h3>
+                <div class="section-title">{$data.lang.PURCHASE_PROCESS}</div>
                 <div class="pp-body">
                     <?php foreach ($data['process'] as $k => $v):?>
                     <?php if($v['type'] == 1):?>
@@ -144,14 +144,14 @@
                     <?php endforeach;?>
                 </div>
             </div>
-            <div class="loans waypoint " id="loans">
-                <h3 class="lo-title">{$data.lang.LOANS}</h3>
+            <div class="loans waypoint" id="loans">
+                <div class="section-title">{$data.lang.LOANS}</div>
                 <div class="lo-body">
                     {$data.info.loans}
                 </div>
             </div>
         </div>
-        <div class="broker " id="broker">
+        <div class="broker" id="broker">
 	        <div class="broker-inner">
 		        <div class="broker-name">
 			        <div style="background-image: url('{$data.broker.avatar}')" class="avatar"></div>
