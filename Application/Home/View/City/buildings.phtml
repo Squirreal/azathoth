@@ -1,7 +1,7 @@
 <?php if(IS_AJAX && IS_POST):?>
 
-	<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.RELATED_BUILDINGS}</h2>
-	<div class="section-body animated" data-animate="fadeInUp">
+	<h2 class="section-title ">{$data.lang.RELATED_BUILDINGS}</h2>
+	<div class="section-body ">
         <?php foreach($data['buildings'] as $k => $v):?>
 			<a class="building-item" href="{:LU('/building/'.$v['id'])}">
 				<div class="building-cover">
@@ -22,7 +22,7 @@
 
 
 	</div>
-	<div class="pagebar animated" data-animate="fadeInUp">
+	<div class="pagebar ">
 		{$data.pager}
 	</div>
 
@@ -45,8 +45,8 @@
 <?php if($data['buildings']):?>
 <div class="section hot-buildings" style="background: #FFFFFF;min-height:600px">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.RELATED_BUILDINGS}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.RELATED_BUILDINGS}</h2>
+		<div class="section-body ">
             <?php foreach($data['buildings'] as $k => $v):?>
 			<a class="building-item" href="{:LU('/building/'.$v['id'])}">
 				<div class="building-cover">
@@ -67,7 +67,7 @@
 
 
 		</div>
-		<div class="pagebar animated" data-animate="fadeInUp">
+		<div class="pagebar ">
 			{$data.pager}
 		</div>
 	</div>

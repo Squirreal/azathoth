@@ -1,7 +1,7 @@
 <?php if(IS_AJAX && IS_POST):?>
 
-	<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.PRESALES_LIST}</h2>
-	<div class="section-body animated" data-animate="fadeInUp">
+	<h2 class="section-title ">{$data.lang.PRESALES_LIST}</h2>
+	<div class="section-body ">
         <?php foreach ($data['presales'] as $k => $item):?>
 			<a class="presale-item" href="{:LU('/presale/'.$item['id'])}">
 				<div class="presale-meta">
@@ -30,7 +30,7 @@
         <?php endforeach;?>
 
 	</div>
-	<div class="pagebar animated" data-animate="fadeInUp">
+	<div class="pagebar ">
 		{$data.pager}
 	</div>
 
@@ -53,8 +53,8 @@
 <?php if($data['presales']):?>
 <div class="section presales-list" style="background: #FFFFFF;min-height:600px">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.PRESALES_LIST}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.PRESALES_LIST}</h2>
+		<div class="section-body ">
             <?php foreach ($data['presales'] as $k => $item):?>
             <a class="presale-item" href="{:LU('/presale/'.$item['id'])}">
 	            <div class="presale-cover">
@@ -75,7 +75,7 @@
             <?php endforeach;?>
 
 		</div>
-		<div class="pagebar animated" data-animate="fadeInUp">
+		<div class="pagebar ">
 			{$data.pager}
 		</div>
 	</div>

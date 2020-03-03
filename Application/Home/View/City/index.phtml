@@ -26,8 +26,8 @@
 
 	<div class="city-image fl" style="background-image: url('<?=$data['banner_images'][0]['file']?>')">
 		<div class="inner">
-			<h2 class="city-name animated" data-animate="fadeInUp">{$data.info.name}</h2>
-			<div class="city-meta animated" data-animate="fadeInUp">
+			<h2 class="city-name ">{$data.info.name}</h2>
+			<div class="city-meta ">
 				<p>{$data.lang.COUNTRY_OF_ORIGIN}：{$data.info.country_name}</p>
 				<p>{$data.lang.AREA}：{$data.info.area}</p>
 				<p>{$data.lang.CURRENCY}：{$data.info.currency}</p>
@@ -55,8 +55,8 @@
 
 <div class="section waypoint city-feature" id="city-feature">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.CITY_IDENTITY}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.CITY_IDENTITY}</h2>
+		<div class="section-body ">
 			<dl class="hide">
 				<dt>{$data.lang.LIVABLE_CITY_RANKING}</dt>
 				<dd>{$data.info.livable_rank}</dd>
@@ -88,8 +88,8 @@
 <?php if($data['info']['building_intro']):?>
 <div class="section waypoint building-intro" id="building-intro">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.REAL_ESTATE_MARKET}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.REAL_ESTATE_MARKET}</h2>
+		<div class="section-body ">
 			{$data.info.building_intro}
 		</div>
 	</div>
@@ -99,8 +99,8 @@
 <?php if($data['presales']):?>
 <div class="section waypoint presales-list" id="presales-list">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.PRESALES_LIST}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.PRESALES_LIST}</h2>
+		<div class="section-body ">
             <?php foreach ($data['presales'] as $k => $item):?>
             <a class="presale-item" href="{:LU('/presale/'.$item['id'])}">
 	            <div class="presale-cover">
@@ -129,8 +129,8 @@
 <?php if($data['buildings']):?>
 <div class="section waypoint hot-buildings" id="hot-buildings">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.RELATED_BUILDINGS}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.RELATED_BUILDINGS}</h2>
+		<div class="section-body ">
             <?php foreach($data['buildings'] as $k => $v):?>
 			<a class="building-item" href="{:LU('/building/'.$v['id'])}">
 				<div class="building-cover">

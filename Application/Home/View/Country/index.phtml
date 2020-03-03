@@ -25,8 +25,8 @@
 
 	<div class="country-image fl" style="background-image: url('<?=$data['banner_images'][0]['file']?>')">
 		<div class="inner">
-			<h2 class="country-name animated" data-animate="fadeInUp">{$data.info.name}</h2>
-			<div class="country-meta animated" data-animate="fadeInUp">
+			<h2 class="country-name ">{$data.info.name}</h2>
+			<div class="country-meta ">
 				<p>{$data.lang.POPULATION}：{$data.info.population}</p>
 				<p>{$data.lang.AREA}：{$data.info.area}</p>
 				<p>{$data.lang.CURRENCY}：{$data.info.currency}</p>
@@ -50,8 +50,8 @@
 <?php if($data['hot_city']):?>
 	<div class="section waypoint hot-city" id="hot-city">
 		<div class="container">
-			<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.HOT_CITY}</h2>
-			<div class="section-body animated" data-animate="fadeInUp">
+			<h2 class="section-title ">{$data.lang.HOT_CITY}</h2>
+			<div class="section-body ">
 				<div class="swiper-country">
 					<div class="swiper-container">
 						<div class="swiper-wrapper">
@@ -78,8 +78,8 @@
 
 <div class="section waypoint country-identity" id="country-identity">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.COUNTRY_IDENTITY}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.COUNTRY_IDENTITY}</h2>
+		<div class="section-body ">
 			{$data.info.feature}
 		</div>
 	</div>
@@ -87,8 +87,8 @@
 
 <div class="section waypoint country-immigration" id="country-immigration">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.IMMIGRATION}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.IMMIGRATION}</h2>
+		<div class="section-body ">
 			{$data.info.immigration}
 		</div>
 	</div>
@@ -96,26 +96,26 @@
 
 <div class="section waypoint country-feature" id="country-feature">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.ECONOMIC_PROFILE}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.ECONOMIC_PROFILE}</h2>
+		<div class="section-body ">
 			<div class="feature-item">
 				<p class="icon"><img src="__PUBLIC__/img/icon_monetization_on.png"/> </p>
-				<p class="title">GDP</p>
+				<p class="title">GDP(2019)</p>
 				<p class="intro">{$data.info.gdp}</p>
 			</div>
 			<div class="feature-item">
 				<p class="icon"><img src="__PUBLIC__/img/icon_attach_money.png"/> </p>
-				<p class="title">{$data.lang.GDP_PER_CAPITA}</p>
+				<p class="title">{$data.lang.GDP_PER_CAPITA}(2019)</p>
 				<p class="intro">{$data.info.gdp_per_capita}</p>
 			</div>
 			<div class="feature-item">
 				<p class="icon"><img src="__PUBLIC__/img/icon_trending_up.png"/> </p>
-				<p class="title">{$data.lang.GDP_GROWTH}</p>
+				<p class="title">{$data.lang.GDP_GROWTH}(2019)</p>
 				<p class="intro">{$data.info.gdp_growth}</p>
 			</div>
 			<div class="feature-item">
 				<p class="icon"><img src="__PUBLIC__/img/icon_bookmarks.png"/> </p>
-				<p class="title">{$data.lang.RANKING_OF_SECURITY_COUNTRIES}</p>
+				<p class="title">{$data.lang.RANKING_OF_SECURITY_COUNTRIES}(2019)</p>
 				<p class="intro">{$data.info.security_ranking}</p>
 			</div>
 		</div>
@@ -125,8 +125,8 @@
 <?php if($data['presales']):?>
 <div class="section waypoint presales-list" id="presales-list">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.PRESALES_LIST}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.PRESALES_LIST}</h2>
+		<div class="section-body ">
             <?php foreach ($data['presales'] as $k => $item):?>
             <a class="presale-item" href="{:LU('/presale/'.$item['id'])}">
 	            <div class="presale-cover">
@@ -155,8 +155,8 @@
 <?php if($data['buildings']):?>
 <div class="section waypoint hot-buildings" id="hot-buildings">
 	<div class="container">
-		<h2 class="section-title animated" data-animate="fadeInUp">{$data.lang.RELATED_BUILDINGS}</h2>
-		<div class="section-body animated" data-animate="fadeInUp">
+		<h2 class="section-title ">{$data.lang.RELATED_BUILDINGS}</h2>
+		<div class="section-body ">
             <?php foreach($data['buildings'] as $k => $v):?>
 			<a class="building-item" href="{:LU('/building/'.$v['id'])}">
 				<div class="building-cover">

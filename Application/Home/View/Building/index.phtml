@@ -55,7 +55,7 @@
 
 <div class="section">
     <div class="container">
-        <div class="building animated" data-animate="fadeInUp">
+        <div class="building ">
             <h2 class="building-name">{$data.info.name}</h2>
             <p class="building-location">{$data.info.location}</p>
             <div class="building-meta">
@@ -82,7 +82,7 @@
                     <p>{$data.info.project_status}</p>
                 </div>
             </div>
-            <div class="building-info waypoint animated" data-animate="fadeInUp" id="building-info">
+            <div class="building-info waypoint " id="building-info">
                 <h3 class="info-title">
 	                <span>{$data.lang.PROJECT_INFO}</span>
 	                <?php if($data['info']['pdf']):?>
@@ -130,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <div class="purchase-process waypoint animated" data-animate="fadeInUp" id="purchase-process">
+            <div class="purchase-process waypoint " id="purchase-process">
                 <h3 class="pp-title">{$data.lang.PURCHASE_PROCESS}</h3>
                 <div class="pp-body">
                     <?php foreach ($data['process'] as $k => $v):?>
@@ -144,14 +144,14 @@
                     <?php endforeach;?>
                 </div>
             </div>
-            <div class="loans waypoint animated" data-animate="fadeInUp" id="loans">
+            <div class="loans waypoint " id="loans">
                 <h3 class="lo-title">{$data.lang.LOANS}</h3>
                 <div class="lo-body">
                     {$data.info.loans}
                 </div>
             </div>
         </div>
-        <div class="broker animated" data-animate="fadeInUp" id="broker">
+        <div class="broker " id="broker">
 	        <div class="broker-inner">
 		        <div class="broker-name">
 			        <div style="background-image: url('{$data.broker.avatar}')" class="avatar"></div>
