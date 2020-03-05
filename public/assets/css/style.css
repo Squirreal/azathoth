@@ -77,10 +77,9 @@ body.home .section-title { text-align:center;font-size: 28px;color: #333333;lett
 body.home .section.hot-country, body.home .section.presales-list { background: #F2F3F5; }
 
 .swiper-country { position:relative }
-.swiper-country .swiper-container { width: 100%; height: 164px;  }
+.swiper-country .swiper-container { width: 100%; height: 164px; }
 .swiper-country .swiper-wrapper { padding-top:3px; }
-.swiper-country .swiper-slide { background:#FFF;border-radius: 8px;overflow:hidden;box-shadow: 0 0 6px 0 rgba(0,0,0,0.10); }
-.swiper-country .swiper-slide { height:158px; }
+.swiper-country .swiper-slide { width:250.75px;height:158px;margin-right:15px;background:#FFF;border-radius: 8px;overflow:hidden;box-shadow: 0 0 6px 0 rgba(0,0,0,0.10); }
 .swiper-country .swiper-slide a { display:block;width:100%;height:100%;position:relative }
 .swiper-country .swiper-slide .cover { position:absolute;width:100%;height:100%;background-repeat:no-repeat;background-position: center;background-size:cover;transition: all 0.3s ease-out 0s;top:0px;left:0px;}
 .swiper-country .swiper-slide a:hover .cover { transform:scale(1.2) }
