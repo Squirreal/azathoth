@@ -66,23 +66,12 @@
 
 <?php endif;?>
 
-<?php if($data['info']['name']):?>
+<?php if($data['info']['immigration']):?>
 
 <div class="section">
-	<div class="section-title">{$data.lang.ECONOMIC_PROFILE}</div>
+<div class="section-title">{$data.lang.IMMIGRATION_POLICY}</div>
 	<div class="section-body">
-		<div class="economy-item">
-			<span>GDP</span>
-			<span>{$data.info.gdp}</span>
-		</div>
-		<div class="economy-item">
-			<span>{$data.lang.GDP_PER_CAPITA}</span>
-			<span>{$data.info.gdp_per_capita}</span>
-		</div>
-		<div class="economy-item">
-			<span>{$data.lang.GDP_GROWTH}</span>
-			<span>{$data.info.gdp_growth}</span>
-		</div>
+		<div>{$data.info.immigration}</div>
 	</div>
 </div><!-- //经济概况 -->
 

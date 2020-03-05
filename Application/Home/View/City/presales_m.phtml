@@ -9,18 +9,13 @@
 				<div class="presale-cover" style="background-image:url({$item.cover})"></div>
 				<div class="presale-info">
                     <?php if($item['name']):?>
-						<span class="item-left">{$item.name}</span>
+						<span>{$item.name}</span>
                     <?php endif;?>
                     <?php if($item['type']):?>
-						<span>{$item.type}</span>
+						<span class="item-info">{$item.type} - {$item.area}</span>
                     <?php endif;?>
-				</div>
-				<div class="presale-info">
                     <?php if($item['layout']):?>
-						<span class="item-left">{$item.layout}</span>
-                    <?php endif;?>
-                    <?php if($item['area']):?>
-						<span>{$item.area}</span>
+						<span class="item-info">{$item.layout}</span>
                     <?php endif;?>
 				</div>
 			</div>
