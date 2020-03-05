@@ -76,8 +76,9 @@ body.country .section .hot-city .city-name { display: block; width: 100%; height
 body.country .section .economy-item { padding: 16px 14px; border-top: 1px solid #EDEDED; display: flex; align-items: center; justify-content: space-between; font-size: 14px; color: #333333; letter-spacing: 0;}
 body.country .section .economy-item:last-child { border-bottom: 1px solid #EDEDED;}
 body.country .section .economy-item span:last-child { width: 60%; text-align: right;}
-body.country .section.feature .section-body { padding-left: 14px; padding-right: 14px; font-size: 12px;}
-body.country .section.buildings .section-body { padding-left: 14px; padding-right:14px; justify-content: space-between; display: flex; align-items: flex-start; flex-wrap: wrap;}
+body.country .section .feature .section-body { padding-left: 14px; padding-right: 14px; font-size: 12px;}
+body.country .section .immigration .section-body { padding-left: 14px; padding-right: 14px; font-size: 12px;}
+body.country .section .buildings .section-body { padding-left: 14px; padding-right:14px; justify-content: space-between; display: flex; align-items: flex-start; flex-wrap: wrap;}
 body.country .section .building-item { width: 48%; margin-bottom: 16px; background:#FFFFFF; box-shadow: 0 0 4px 0 rgba(0,0,0,0.20);}
 body.country .section .building-item .building-cover { width: 100%; height: 120px; background-position: center center; background-repeat: no-repeat; background-color: #FFFFFF; background-size: cover; position: relative;}
 body.country .section .building-item .building-tag { font-size:10px; color: #FFF; background: #A1887F; padding:2px 3px; border-radius: 2px; position: absolute; right: 4px; bottom: 8px;}
