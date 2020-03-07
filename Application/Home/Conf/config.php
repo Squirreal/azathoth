@@ -2,7 +2,7 @@
 
 return array(
     'TMPL_PARSE_STRING' => array(
-		'__PUBLIC__' => dirname($_SERVER['SCRIPT_NAME']).'public/assets',
+		'__PUBLIC__' => 'https://squirreal.oss-cn-shanghai.aliyuncs.com/asset',
         '__CSSVER__' => !APP_DEBUG ? '1.0.0' : date('YmdHis'),
         '__JSVER__' => !APP_DEBUG ? '1.0.0' : date('YmdHis')
 	),
