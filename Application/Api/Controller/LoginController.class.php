@@ -81,7 +81,7 @@ class LoginController extends BaseController {
                 $data = [
                     'wx_openid' => $openid,
                     'nickname' => $wechat['nickName'],
-                    'avatar' => $wechat['avatarUrl'],
+                    'avatar' => str_replace('http', 'https', $wechat['avatarUrl']),
                     'county' => $wechat['county'],
                     'province' => $wechat['province'],
                     'city' => $wechat['city'],
@@ -114,7 +114,7 @@ class LoginController extends BaseController {
             if ($type == 'wechat') {
                 $data = [
                     'nickname' => $wechat['nickName'],
-                    'avatar' => $wechat['avatarUrl'],
+                    'avatar' => str_replace('http', 'https', $wechat['avatarUrl']),
                     'county' => $wechat['county'],
                     'province' => $wechat['province'],
                     'city' => $wechat['city'],
