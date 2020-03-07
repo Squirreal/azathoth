@@ -19,7 +19,7 @@ class LoginController extends BaseController {
         }
         session('wx_redirect_url', $redirect);
 
-        redirect('https://open.weixin.qq.com/connect/qrconnect?appid='.C('OPEN_WECHAT.APP_ID').'&redirect_uri=https%3A%2F%2Fwww.squirreal.cn%2Flogin%2Fwechat&response_type=code&scope=snsapi_login&state=login#wechat_redirect');
+        redirect('https://open.weixin.qq.com/connect/qrconnect?appid='.C('OPEN_WECHAT.APP_ID').'&redirect_uri='.urlencode($redirect).'login%2Fwechat&response_type=code&scope=snsapi_login&state=login#wechat_redirect');
     }
 
     public function wechat() {
@@ -43,7 +43,7 @@ class LoginController extends BaseController {
                 $data = [
                     'wx_openid' => $userinfo['openid'],
                     'nickname' => $userinfo['nickname'],
-                    'avatar' => $userinfo['headimgurl'],
+                    'avatar' => str_replace('http://', 'https://', $userinfo['headimgurl']),
                     'county' => $userinfo['county'],
                     'province' => $userinfo['province'],
                     'city' => $userinfo['city'],
@@ -63,7 +63,7 @@ class LoginController extends BaseController {
             } else {
                 $data = [
                     'nickname' => $userinfo['nickname'],
-                    'avatar' => $userinfo['headimgurl'],
+                    'avatar' => str_replace('http://', 'https://', $userinfo['headimgurl']),
                     'county' => $userinfo['county'],
                     'province' => $userinfo['province'],
                     'city' => $userinfo['city'],
