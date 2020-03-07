@@ -25,11 +25,11 @@ abstract class BaseController extends Controller {
         $this->data['description'] = $this->data['lang']['WEBSITE_FEATURE'];
         $this->data['userinfo'] = session('userinfo');
         if ($this->isMobile()) {
-            $this->data['css'] = ['css/style_m.css'];
-            $this->data['js'] = ['vendor/fastclick/fastclick.min.js', 'vendor/layer/layer.m.js','js/functions_m.js'];
+            $this->data['css'] = ['style_m.css'];
+            $this->data['js'] = ['fastclick.min.js', 'layer.m.js','functions_m.js'];
         } else {
-            $this->data['css'] = ['css/style.css'];
-            $this->data['js'] = ['js/functions.js'];
+            $this->data['css'] = ['style.css'];
+            $this->data['js'] = ['functions.js'];
         }
 
         $this->weblogic = D('Weblogic');

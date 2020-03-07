@@ -74,7 +74,7 @@ class CityController extends BaseController {
         $this->data['pager'] = $_page->show();
 
         $this->data['shareUrl'] = 'type=presales&id='.$id;
-        $this->data['css'][] = 'vendor/font-awesome/css/font-awesome.min.css';
+        $this->data['css'][] = 'font-awesome.min.css';
         $this->setTitle($this->data['lang']['PRESALES_LIST']);
         $this->assign('data', $this->data);
         $this->display(__FUNCTION__);
@@ -96,7 +96,7 @@ class CityController extends BaseController {
         $this->data['pager'] = $_page->show();
 
         $this->data['shareUrl'] = 'type=cityBuildings&id='.$id;
-        $this->data['css'][] = 'vendor/font-awesome/css/font-awesome.min.css';
+        $this->data['css'][] = 'font-awesome.min.css';
         $this->setTitle($this->data['lang']['RELATED_BUILDINGS']);
         $this->assign('data', $this->data);
         $this->display(__FUNCTION__);

@@ -6,12 +6,12 @@
  */
 function build_js($js) {
     $js_arr = array(
-        'vendor/modernizr/modernizr-2.8.3-respond-1.4.2.min.js',
-        'vendor/swiper/swiper.min.js',
-        'vendor/jquery/jquery.min.js',
-        'vendor/jquery/jquery.waypoints.min.js',
-        'vendor/qrcode/qrcode.min.js',
-        'js/common.js',
+        'modernizr-2.8.3-respond-1.4.2.min.js',
+        'swiper.min.js',
+        'jquery.min.js',
+        'jquery.waypoints.min.js',
+        'qrcode.min.js',
+        'common.js',
     );
     if ($js) {
         if (is_array($js)) {
@@ -26,7 +26,7 @@ function build_js($js) {
     $tmpl_parse_string = C('TMPL_PARSE_STRING');
 
     foreach ($js_arr as $k => $v) {
-        $v = ($tmpl_parse_string['__PUBLIC__']).'/'.$v.'?_v='.$tmpl_parse_string['__JSVER__'];
+        $v = C('FILES_SERVER').'asset/'.$v.'?_v='.$tmpl_parse_string['__JSVER__'];
         echo "<script type=\"text/javascript\" src=\"{$v}\"></script>\n";
     }
 }
@@ -38,8 +38,8 @@ function build_js($js) {
  */
 function build_css($css) {
     $css_arr = array(
-        'css/animate.min.css',
-        'vendor/swiper/swiper.min.css',
+        'animate.min.css',
+        'swiper.min.css',
     );
     if ($css) {
         if (is_array($css)) {
@@ -54,7 +54,7 @@ function build_css($css) {
     $tmpl_parse_string = C('TMPL_PARSE_STRING');
 
     foreach ($css_arr as $k => $v) {
-        $v = ($tmpl_parse_string['__PUBLIC__']).'/'.$v.'?_v='.$tmpl_parse_string['__CSSVER__'];
+        $v = C('FILES_SERVER').'asset/'.$v.'?_v='.$tmpl_parse_string['__CSSVER__'];
         echo '<link type="text/css" rel="stylesheet" href="'.$v.'" />'."\n";
     }
 }

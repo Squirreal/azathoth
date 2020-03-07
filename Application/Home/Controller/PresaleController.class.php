@@ -14,8 +14,8 @@ class PresaleController extends BaseController {
 
         $this->data['body_class'] = 'presale';
         $this->data['js_module'] = 'presale';
-        $this->data['css'][] = 'vendor/smartphoto/css/smartphoto.min.css';
-        $this->data['js'][] = 'vendor/smartphoto/jquery-smartphoto.min.js';
+        $this->data['css'][] = 'smartphoto.min.css';
+        $this->data['js'][] = 'jquery-smartphoto.min.js';
     }
 
     public function index() {
