@@ -57,7 +57,7 @@
 						<div class="swiper-wrapper">
                             <?php foreach ($data['hot_city'] as $k => $v):?>
 								<div class="swiper-slide">
-									<a href="{:LU('/city/'.$v['id'])}" title="{$v.full_name}">
+									<a href="{:LU('/city/'.$v['id'])}" class="swiper-no-swiping" title="{$v.full_name}">
 										<div class="cover" style="background-image:url({$v.web_cover_img})"></div>
 										<div class="inner">
 											<h3>{$v.full_name}</h3>
