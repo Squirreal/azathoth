@@ -82,6 +82,7 @@ abstract class BaseController extends Controller {
      * @return bool
      */
     private function isMobile() {
+        return true;
         if ( empty($_SERVER['HTTP_USER_AGENT']) ) {
             $is_mobile = false;
         } elseif(strpos($_SERVER['HTTP_USER_AGENT'], 'iPad') !== false) {

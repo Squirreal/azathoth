@@ -189,9 +189,32 @@
 			<span class="intro"></span>
 		</div>
 	</div>
-	<button class="btn-contact">{$data.lang.WECHAT}</button>
+	<button id="btn-contact" class="btn-contact">{$data.lang.WECHAT}</button>
 </div>
 <?php endif;?>
+
+<div class="broker-container" id="broker-container">
+	<div class="broker-inner" id="broker-inner">
+		<div class="broker-title">{$data.lang.LEAVECOMMENT}</div>
+		<div class="broker-item">
+			<div class="left-col">{$data.lang.PHONE}</div>
+			<div class="right-col">
+				<input value="" type="text" id="message-contact" />
+			</div>
+		
+		</div>
+		<div class="broker-item">
+			<div class="left-col">{$data.lang.COMMENT}</div>
+			<div class="right-col">
+				<input type="textarea" id="message-comment" />
+			</div>
+		</div>
+		<div class="broker-actions">
+			<button class="btn-confirm" data-id={$data.id}>{$data.lang.CONFIRM}</button>
+		</div>
+	</div>
+	<div class="btn-close">{$data.lang.CLOSE}</div>
+</div>
 
 <div class="calc-container" id="calc-container">
 	<div class="calc-inner">

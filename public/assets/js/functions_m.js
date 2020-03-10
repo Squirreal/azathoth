@@ -43,12 +43,14 @@
             tags();
             navbar();
             calc();
+            contact();
         }
 
         function presalePage() {
             swiper();
             tags();
             calc();
+            contact();
         }
 
         function swiper() {
@@ -76,6 +78,28 @@
                 $(this).parent().parent().find(".intro-item").removeClass("active");
                 $(this).parent().parent().find(".intro-item:eq(" + index + ")").addClass("active");
             });
+        }
+
+        function contact() {
+            $body.on("click", ".borker-fixed #btn-contact", function () {
+                $("#broker-container").addClass("show");
+            });
+            $body.on("click", "#broker-container .btn-close", function () {
+                $("#broker-container").removeClass("show");
+            });
+
+            $body.on("click", "#broker-container .btn-confirm", function () {
+                $.post('/message.html', {
+                    type: 1,
+                    id: $("#broker-container .btn-confirm").attr('data-id'),
+                    tel: $("#message-contact").val(),
+                    msg: $("#message-comment").val()
+                }, function (res) {
+                    $("#broker-container").removeClass("show");
+                    alert(res.msg);
+                });
+            });
+           
         }
 
         function calc() {

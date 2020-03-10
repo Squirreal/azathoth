@@ -238,6 +238,8 @@ body.presale .borker-fixed .broker-info .name { font-size: 14px; color: #2F2F2F;
 body.presale .borker-fixed .broker-info .intro { font-size: 12px; color: #999999; letter-spacing: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;}
 body.presale .borker-fixed .btn-contact { width: 150px; height: 100%; background: #A1887F; padding: 0px; margin: 0px; border-radius: 0px; line-height: 52px; color: #FFF; font-size: 16px;}
 
+.broker-container { position: fixed; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); transform: translateY(-100%); transition: all 0.3s ease-out 0s;z-index:999999;top:0px;}
+.broker-container.show { transform: translateY(0);}
 
 .btn-share-container, .btn-calc-container { width: 48px; height: 48px; min-width: 0px; min-height: 0px; padding: 0px; position: fixed; right: 14px; bottom: 56px; margin: 0px; overflow: hidden; background: #FFFFFF; border-radius: 24px; box-shadow: 0 0 6px 0 rgba(0,0,0,0.15);z-index:999999}
 .btn-share-container .btn-share, .btn-calc-container .btn-calc { width: 100%; height: 100%; margin: 0px; padding: 0px; background-color:#FFFFFF; display: flex; align-items: center; justify-content: center;}
@@ -246,17 +248,19 @@ body.presale .borker-fixed .btn-contact { width: 150px; height: 100%; background
 .btn-calc-container .btn-calc img { width: 30px; height: 30px;}
 .calc-container { position: fixed; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); transform: translateY(-100%); transition: all 0.3s ease-out 0s;z-index:999999;top:0px;}
 .calc-container.show { transform: translateY(0);}
-.calc-container .calc-inner { display: flex; flex-direction: column; background: #FFFFFF; padding: 12px 0px; align-items: center;}
-.calc-container .calc-title { font-size: 16px; padding-bottom: 20px;}
-.calc-container .calc-item { height: 40px; border-top: 1px solid #EDEDED; display: flex; align-items: center; justify-content: space-between; font-size: 14px; color: #333333; letter-spacing: 0; width: 100%;}
-.calc-container .calc-item .left-col { padding-left: 8px;}
-.calc-container .calc-item .right-col { height:40px;padding-right: 8px; width: 60%; text-align: right; display: flex; align-items: center; justify-content: flex-end;}
+.broker-container .broker-inner { height: 169px; }
+.broker-container .broker-inner, .calc-container .calc-inner { display: flex; flex-direction: column; background: #FFFFFF; padding: 12px 0px; align-items: center;}
+.broker-container .broker-title, .calc-container .calc-title { font-size: 16px; padding-bottom: 20px;color: #000}
+.broker-container .broker-item, .calc-container .calc-item { height: 40px; border-top: 1px solid #EDEDED; display: flex; align-items: center; justify-content: space-between; font-size: 14px; color: #333333; letter-spacing: 0; width: 100%;}
+.broker-container .broker-item .left-col, .calc-container .calc-item .left-col { padding-left: 8px;}
+.broker-container .broker-item .right-col, .calc-container .calc-item .right-col { height:40px;padding-right: 8px; width: 60%; text-align: right; display: flex; align-items: center; justify-content: flex-end;}
 .calc-container .calc-item input { text-align: right; height: 40px; line-height: 40px;border:0px;}
-.calc-container .calc-item select, .calc-container .calc-item option{ width: 100%;height:100%;}
+.broker-container .broker-item input { text-align: right;line-height: 40px;border:0px;}
+.broker-container .broker-item select, .broker-container .broker-item option, .calc-container .calc-item select, .calc-container .calc-item option{ width: 100%;height:100%;}
 .calc-container .calc-actions { border-top:1px solid #EDEDED; width: 100%; padding: 12px 0px; display: flex; align-items: center; justify-content: center;}
-.calc-container .calc-actions button { font-size: 14px; margin-left: 6px; margin-right: 6px;padding:8px 12px;border-radius: 4px;}
+.broker-container .broker-actions button, .calc-container .calc-actions button { font-size: 14px; margin-left: 6px; margin-right: 6px;padding:8px 12px;border-radius: 4px;}
 .calc-container .calc-actions button:active { opacity: 0.7;}
-.calc-container .calc-actions .btn-confirm { color: #FFFFFF; background: #A1887F;}
+.broker-container .broker-actions .btn-confirm, .calc-container .calc-actions .btn-confirm { color: #FFFFFF; background: #A1887F;}
 .calc-container .calc-actions .btn-reset { color: #A0A0A0;background: #eeeeee;}
 .calc-container .calc-result { width: 100%; display: flex; align-items: center; flex-direction: column; margin-top: 12px;}
-.calc-container .btn-close { text-align: center; padding: 40px 0px; font-size: 14px; color: #FFFFFF;cursor: pointer}
+.calc-container, .broker-container .btn-close { text-align: center; padding: 0px; font-size: 14px; color: #FFFFFF;cursor: pointer}
