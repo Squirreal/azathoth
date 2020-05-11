@@ -3,13 +3,13 @@
 <div class="breadcrumb">
     <div class="container">
 	    <span><a rel="nofollow" href="{:LU('/')}">{$data.lang.HOMEPAGE}</a></span>
-	    <img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+	    <img src="__PUBLIC__/img/icon_arrow_right_s.png" alt="icon right" />
 	    <span><a href="{:LU('/country/'.$data['info']['country_id'])}">{$data.info.country_name}</a></span>
-        <img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+        <img src="__PUBLIC__/img/icon_arrow_right_s.png" alt="icon right" />
 	    <span><a href="{:LU('/city/'.$data['info']['city_id'])}">{$data.info.city_name}</a></span>
-        <img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+        <img src="__PUBLIC__/img/icon_arrow_right_s.png" alt="icon right" />
 	    <span><a href="{:LU('/city/presales/id/'.$data['info']['city_id'])}">{$data.lang.PRESALES_LIST}</a></span>
-	    <img src="__PUBLIC__/img/icon_arrow_right_s.png" />
+	    <img src="__PUBLIC__/img/icon_arrow_right_s.png" alt="icon right" />
         <span>{$data.info.name}</span>
     </div>
 </div>
@@ -54,7 +54,7 @@
                 <div class="meta-item">
                     <div class="meta-head">
                         <h3>{$data.lang.PROPERTY_YEARS}</h3>
-                        <div><img src="__PUBLIC__/img/icon_timeline.png"/></div>
+                        <div><img src="__PUBLIC__/img/icon_timeline.png" alt="icon timeline" /></div>
                     </div>
                     <?php if($data['info']['property_years'] > 0):?><p>{$data.info.property_years}{$data.lang.YEAR}</p><?php endif;?>
                     <?php if($data['info']['property_years'] == -1):?><p>{$data.lang.FOREVER}</p><?php endif;?>
@@ -62,14 +62,14 @@
                 <div class="meta-item">
                     <div class="meta-head">
                         <h3>{$data.lang.DELIVERY_TIME}</h3>
-                        <div><img src="__PUBLIC__/img/icon_today.png"/></div>
+                        <div><img src="__PUBLIC__/img/icon_today.png" alt="icon today" /></div>
                     </div>
                     <p>{$data.info.delivery_time}</p>
                 </div>
                 <div class="meta-item">
                     <div class="meta-head">
                         <h3>{$data.lang.PROJECT_STATUS}</h3>
-                        <div><img src="__PUBLIC__/img/icon_dashboard.png"/></div>
+                        <div><img src="__PUBLIC__/img/icon_dashboard.png" alt="icon dashboard" /></div>
                     </div>
                     <p>{$data.info.project_status}</p>
                 </div>
@@ -78,7 +78,7 @@
                 <h3 class="info-title">
 	                <div class="section-title">{$data.lang.PROJECT_INFO}</div>
 	                <?php if($data['info']['pdf']):?>
-	                <a rel="nofollow" href="{$data.info.pdf}" target="_blank">{$data.lang.PROJECT_DOWNLOAD}<img src="__PUBLIC__/img/icon_download.png" /> </a>
+	                <a rel="nofollow" href="{$data.info.pdf}" target="_blank">{$data.lang.PROJECT_DOWNLOAD}<img src="__PUBLIC__/img/icon_download.png" alt="icon download" /> </a>
 	                <?php endif;?>
                 </h3>
                 <div class="info-body">
@@ -130,7 +130,7 @@
                         <?php if($data['tags']):$tag_count=0;foreach($data['tags'] as $tags):?>
                         <?php foreach($tags as $k => $v):?>
                         <div class="tag-item <?php if($tag_count > 0 && ($tag_count + 1) % 4 == 0):?>side<?php endif;?>">
-                            <div class="icon"><img src="{$v.icon}" /></div>
+                            <div class="icon"><img src="{$v.icon}"  alt="icon" /></div>
                             <h4>{$v.name}</h4>
                             <p>{$v.intro}</p>
                         </div>
@@ -147,7 +147,7 @@
 		        <div class="pp-body">
                     <?php foreach ($data['process'] as $k => $v):?>
                         <?php if($v['type'] == 1):?>
-					        <img src="{$v.file}" />
+					        <img src="{$v.file}"  alt="file" />
                         <?php elseif($v['type'] == 2):?>
 					        <video poster="{$v.file}?x-oss-process=video/snapshot,t_1000" controls>
 						        <source src="{$v.file}" type="video/mp4">
@@ -178,7 +178,7 @@
 	            <button id="btn-consult" data-type="2" data-id="{$data.id}">{$data.lang.CONSULT_NOW}</button>
 	        </div>
 
-	        <img src="__PUBLIC__/img/img_qrcode.jpg" class="qrcode" />
+	        <img src="__PUBLIC__/img/img_qrcode.jpg" class="qrcode"  alt="qrcode" />
         </div>
     </div>
 </div>
