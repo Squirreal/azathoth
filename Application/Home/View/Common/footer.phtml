@@ -22,13 +22,13 @@
 
 <div id="layer-lang-switcher" class="layer">
 	<div class="inner">
-		<a href="javascript:" class="close"></a>
+		<a rel="nofollow" href="javascript:" class="close"></a>
 		<h2>{$data.lang.SELECT_LANGUAGE}</h2>
 		<a class="lang-item<?php if($data['current_lang'] == 'cn'):?> active<?php endif;?>" href="{:LU('', array('lang' => 'cn'))}">
 			<h3>简体中文</h3>
 			<p>China</p>
 		</a>
-		<a class="lang-item<?php if($data['current_lang'] == 'en'):?> active<?php endif;?>" href="{:LU('', array('lang' => 'en'))}">
+		<a rel="nofollow" class="lang-item<?php if($data['current_lang'] == 'en'):?> active<?php endif;?>" href="{:LU('', array('lang' => 'en'))}">
 			<h3>ENGLISH</h3>
 			<p>United States</p>
 		</a>
@@ -37,7 +37,7 @@
 
 <div id="layer-login" class="layer">
 	<div class="inner">
-		<a href="javascript:" class="close"></a>
+		<a rel="nofollow" href="javascript:" class="close"></a>
 		<div class="login-title"><em></em><span>{$data.lang.WEB_LOGIN_TITLE}</span><em></em></div>
 		<div class="qrcode" data-url="{:LU('/login/wechat')}">
 			<img src="__PUBLIC__/img/icon_wechat.png" />
@@ -48,7 +48,7 @@
 
 <div id="layer-share" class="layer">
 	<div class="inner">
-		<a href="javascript:" class="close"></a>
+		<a rel="nofollow" href="javascript:" class="close"></a>
 		<div class="share-title"><em></em><span>{$data.lang.WEB_SHARE_TITLE}</span><em></em></div>
 		<div class="qrcode" id="qrcode-share">
 			<img class="wechat-logo" src="__PUBLIC__/img/icon_wechat.png" />
@@ -59,7 +59,7 @@
 
 <div id="layer-message" class="layer">
 	<div class="inner">
-		<a href="javascript:" class="close"></a>
+		<a rel="nofollow" href="javascript:" class="close"></a>
 		<div class="message-title"><em></em><span>{$data.lang.WEB_MESSAGE_TITLE}</span><em></em></div>
 		<div class="message-body">
 			<form action="{:LU('/message')}" method="post" id="msg-form" onsubmit="return false" autocomplete="off">
