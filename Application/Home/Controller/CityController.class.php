@@ -17,6 +17,8 @@ class CityController extends BaseController {
     public function index() {
         $id = I('get.id');
         $data = $this->weblogic->service(self::$TAG.'.'.__FUNCTION__, ['id' => $id]);
+        $data['keywords'] = "{$data['info']['name']}房产,{$data['info']['name']}投资,{$data['info']['name']}买房,{$data['info']['name']}买房移民";
+        $data['description'] = "松鼠国际房产(www.squirreal.cn)是一个精品国际房地产资产配置平台, 为您提供最专业, 最优质的服务。";
         if ($data['banner']) {
             $banner_video = '';
             $banner_images = [];
