@@ -62,6 +62,12 @@ class BuildingController extends BaseController {
         $id = I('get.id');
         $this->data['id'] = $id;
         $data = $this->weblogic->service(self::$TAG.'.'.__FUNCTION__, ['id' => $id]);
+
+        $data['keywords'] = "{$data['info']['name']}项目";
+        foreach($data['tags'] as $k => $v) {
+            $data['keywords'] .= $v.name;
+        }
+        $data['description'] = "松鼠国际房产(www.squirreal.cn)是一个精品国际房地产资产配置平台, 为您提供最专业, 最优质的服务。";
         if ($data['banner']) {
             $banner_video = '';
             $banner_images = [];
