@@ -24,7 +24,7 @@
     <div class="building-images fl">
         <?php foreach ($data['banner_images'] as $k => $v):?>
         <div class="building-image<?php if($k > 3): ?> hide<?php endif;?>">
-            <a class="inner js-img-viwer" href="{$v.file}" data-group="0" data-id="{$k}" style="background-image: url('{$v.file}?x-oss-process=image/resize,w_600'"><img src="{$v.file}" /></a>
+            <a class="inner js-img-viwer" href="{$v.file}" data-group="0" data-id="{$k}" style="background-image: url({$v.file}?x-oss-process=image/resize,w_600)"><img src="{$v.file}" /></a>
         </div>
         <?php endforeach;?>
 
@@ -34,7 +34,7 @@
 
     <?php foreach ($data['banner_images'] as $k => $v):?>
     <div class="building-image<?php if($k > 7): ?> hide<?php endif;?>">
-        <a class="inner js-img-viwer" href="{$v.file}" data-group="0" data-id="{$k}" style="background-image: url('{$v.file}?x-oss-process=image/resize,w_600"><img src="{$v.file}" /> </a>
+        <a class="inner js-img-viwer" href="{$v.file}" data-group="0" data-id="{$k}" style="background-image: url({$v.file}?x-oss-process=image/resize,w_600)"><img src="{$v.file}" /> </a>
     </div>
     <?php endforeach;?>
 
