@@ -127,7 +127,7 @@
             <?php foreach($data['hot_buildings'] as $k => $v):?>
 			<a class="building-item" href="{:LU('/building/'.$v['id'])}" title="{$v.name}">
 				<div class="building-cover">
-					<div class="cover" style="background-image:url({$v.cover}?x-oss-process=image/resize,w_250)"></div>
+					<div class="cover" style="background-image:url({$v.cover})"></div>
 					<div class="inner">
                         <?php if($v['tag']):?>
 						<span class="building-tag">{$v.tag}</span>
