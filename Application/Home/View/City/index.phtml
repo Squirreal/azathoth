@@ -103,7 +103,7 @@
             <?php foreach ($data['presales'] as $k => $item):?>
             <a class="presale-item" href="{:LU('/presale/'.$item['id'])}">
 	            <div class="presale-cover">
-		            <div class="cover" style="background-image:url({$item.cover})"></div>
+		            <div class="cover" style="background-image:url({$item.cover}?x-oss-process=image/resize,w_400)"></div>
 		            <div class="inner">
                         <?php if($item['type']):?>
 				            <span class="presale-type">{$item.type}</span>

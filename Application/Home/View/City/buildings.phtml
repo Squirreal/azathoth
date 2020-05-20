@@ -5,7 +5,7 @@
         <?php foreach($data['buildings'] as $k => $v):?>
 			<a class="building-item" href="{:LU('/building/'.$v['id'])}">
 				<div class="building-cover">
-					<div class="cover" style="background-image:url({$v.cover})"></div>
+					<div class="cover" style="background-image:url({$v.cover}?x-oss-process=image/resize,w_700)"></div>
 					<div class="inner">
                         <?php if($v['tag']):?>
 							<span class="building-tag">{$v.tag}</span>

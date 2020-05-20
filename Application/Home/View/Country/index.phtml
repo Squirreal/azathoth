@@ -19,11 +19,11 @@
 
 	<?php else:?>
 
-	<div class="country-image fl" style="background-image: url('<?=$data['banner_images'][1]['file']?>')"></div>
+	<div class="country-image fl" style="background-image: url('<?=$data['banner_images'][1]['file'].'?x-oss-process=image/resize,w_400'?>')"></div>
 
 	<?php endif;?>
 
-	<div class="country-image fl" style="background-image: url('<?=$data['banner_images'][0]['file']?>')">
+	<div class="country-image fl" style="background-image: url('<?=$data['banner_images'][0]['file'].'?x-oss-process=image/resize,w_400'?>')">
 		<div class="inner">
 			<h2 class="country-name ">{$data.info.name}</h2>
 			<div class="country-meta ">
@@ -130,7 +130,7 @@
             <?php foreach ($data['presales'] as $k => $item):?>
             <a class="presale-item" href="{:LU('/presale/'.$item['id'])}">
 	            <div class="presale-cover">
-		            <div class="cover" style="background-image:url({$item.cover})"></div>
+		            <div class="cover" style="background-image:url({$item.cover}?x-oss-process=image/resize,w_400)"></div>
 		            <div class="inner">
                         <?php if($item['type']):?>
 				            <span class="presale-type">{$item.type}</span>
@@ -160,7 +160,7 @@
             <?php foreach($data['buildings'] as $k => $v):?>
 			<a class="building-item" href="{:LU('/building/'.$v['id'])}">
 				<div class="building-cover">
-					<div class="cover" style="background-image:url({$v.cover})"></div>
+					<div class="cover" style="background-image:url({$v.cover})?x-oss-process=image/resize,w_250"></div>
 					<div class="inner">
                         <?php if($v['tag']):?>
 							<span class="building-tag">{$v.tag}</span>
