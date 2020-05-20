@@ -19,11 +19,11 @@
 
     <?php else:?>
 
-	<div class="city-image fl" style="background-image: url('<?=$data['banner_images'][1]['file']?>')"></div>
+	<div class="city-image fl" style="background-image: url('<?=$data['banner_images'][1]['file'].'?x-oss-process=image/resize,w_720'?>')"></div>
 
     <?php endif;?>
 
-	<div class="city-image fl" style="background-image: url('<?=$data['banner_images'][0]['file']?>')">
+	<div class="city-image fl" style="background-image: url('<?=$data['banner_images'][0]['file'].'?x-oss-process=image/resize,w_720'?>')">
 		<div class="inner">
 			<h2 class="city-name ">{$data.info.name}</h2>
 			<div class="city-meta ">
