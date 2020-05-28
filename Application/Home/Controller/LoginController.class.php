@@ -19,7 +19,7 @@ class LoginController extends BaseController {
         }
         session('wx_redirect_url', $redirect);
 
-        redirect('https://open.weixin.qq.com/connect/qrconnect?appid='.C('OPEN_WECHAT.APP_ID').'&redirect_uri='.urlencode($redirect).'login%2Fwechat&response_type=code&scope=snsapi_login&state=login#wechat_redirect');
+        redirect('https://open.weixin.qq.com/connect/qrconnect?appid='.C('OPEN_WECHAT.APP_ID').'&redirect_uri='.urlencode('https://www.squirreal.cn/login/wechat').'&response_type=code&scope=snsapi_login&state=login#wechat_redirect');
     }
 
     public function wechat() {
